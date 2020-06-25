@@ -1,35 +1,14 @@
-body {
-  padding: 50px;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+.container {
+  width: 1180px;
+  padding-left: 0;
+  margin-left: 370px;
 }
 
-/*.carousel-item {*/
-/*  height: 100vh;*/
-/*  min-height: 300px;*/
-/*  background: no-repeat center center scroll;*/
-/*  -webkit-background-size: cover;*/
-/*  -moz-background-size: cover;*/
-/*  -o-background-size: cover;*/
-/*  background-size: cover;*/
-/*}*/
-/*.carousel-caption {*/
-/*  bottom: 270px;*/
-/*}*/
-
-/*.carousel-caption h5 {*/
-/*  font-size: 45px;*/
-/*  text-transform: uppercase;*/
-/*  letter-spacing: 2px;*/
-/*  margin-top: 25px;*/
-/*}*/
-
-/*.carousel-caption p {*/
-/*  width: 75%;*/
-/*  margin: auto;*/
-/*  font-size: 18px;*/
-/*  line-height: 1.9;*/
-/*}*/
+.navbar {
+  padding: 0;
+  height: 80px;
+  background-color: white
+}
 
 .navbar-light .navbar-brand {
   color: #000000;
