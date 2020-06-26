@@ -33,6 +33,56 @@ header {
     font-weight: 500;
 }
 
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 820px;
+    background: url("../images/JHSUSTAIN_BANNER.png");
+}
+
+/* BANNER CONTENT */
+.banner_content {
+    width: 1791px;
+    height: 263px;
+    margin-left: 131px;
+    background-color: #184C4E;
+    position: absolute;
+    right: 0;
+    bottom: -104px;
+    z-index: 10;
+}
+
+.banner_letter {
+    width: 1180px;
+    height: 140px;
+    margin-left: 237px;
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center
+}
+
+.banner_left_letter {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    width: 499px;
+    line-height: 31.22px;
+}
+
+.banner_right_letter {
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    width: 599px;
+    margin-left: 82px;
+    line-height: 28.8px;
+    text-align: justify
+}
+
+
+
 /*.carousel-item {*/
 /*  height: 100vh;*/
 /*  min-height: 300px;*/

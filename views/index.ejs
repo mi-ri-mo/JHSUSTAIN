@@ -32,7 +32,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
               <!-- 로고 -->
-              <a class="navbar-brand" href="#"><img src="/images/JHSUSTAIN_FULL_LOGO.png" style="width: 136px; height: auto"></a>
+              <a class="navbar-brand" href="#"><img src="/images/JHSUSTAIN_FULL_LOGO.png" class="nav_logo"></a>
 
               <!-- 햄버거 버튼 -->
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,11 +51,11 @@
                       <!-- TODO: 프로젝트 추가 시 드롭다운 메뉴도 늘어나야 함 -->
                       <li class="dropdown">
                           <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" style="padding-right: 38px;">Our Work <span class="glyphicon glyphicocn-menu-down"></span></a>
-                          <div class="dropdown-menu">
-                              <a href="#" class="dropdown-item">Dropdown Item 1</a>
-                              <a href="#" class="dropdown-item">Dropdown Item 2</a>
-                              <a href="#" class="dropdown-item">Dropdown Item 3</a>
-                          </div>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item">ITEM</a></li>
+                              <li><a class="dropdown-item">ITEM</a></li>
+                              <li><a class="dropdown-item">ITEM</a></li>
+                          </ul>
                       </li>
 
                       <!-- In the News -->
@@ -75,19 +75,31 @@
     </header>
 
     <!-- BANNER -->
-    <div style="width: 100%; height: 820px; background-color: grey">
-        <img src="/images/sea-1209607_1920.png" style="width: 100%; height: 100%">
+    <div class="banner">
+        <div style="width: 1180px; margin-left: 373px; padding-top: 265.3px;">
+            <!-- WELCOME -->
+            <div style="color: white; font-size: 27.47px; line-height: 32.96px; font-weight: 500;">
+                Welcome to JH SUSTAIN
+            </div>
+            <!-- MESSAGE -->
+            <div>
+            </div>
+        </div>
     </div>
 
     <!-- BANNER CONTENT -->
-    <div style="width: 1791px; height: 263px; margin-left: 131px; background-color: #184C4E; position: absolute; right: 0; bottom: -104px; z-index: 10;">
-        <!-- TODO: 상단 margin 60px -->
-        <div style="width: 1180px; height: 140px;">
-
-            <div>
+    <div class="banner_content">
+        <div class="banner_letter">
+            <div class="banner_left_letter">
+                Our team members are professional in the water risk management field.
             </div>
 
-            <div>
+            <div class="banner_right_letter">
+                JHSUSTAIN is an international development consulting firm drawing
+                on the broad experience of a wide range of associated professionals
+                and organizations. We and associates come from the globe with
+                good knowledge of the requirements of community, business, and
+                government partners in the context of international development.
             </div>
         </div>
     </div>
@@ -109,10 +121,11 @@
 
     <!-- FOOTER -->
     <footer style="width: 100%; height: 300px; background-color: #184C4E">
-        <div style="width: 1180px;">
+        <div style="width: 1180px; margin-left: 378px;">
         <!-- TODO: 로고 -480px-> 글씨 -->
             <!-- LOGO -->
             <div>
+                <img src="/images/JHSUSTAIN_FOOTER_LOGO.png" style="width: 202px; height: auto; margin-top: 57px;">
             </div>
 
             <!-- PAGES  -->
