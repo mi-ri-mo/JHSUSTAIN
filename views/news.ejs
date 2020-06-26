@@ -22,9 +22,14 @@
 <body>
 
 <!-- HEADER -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="height: 80px;">
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="/images/JHSUSTAIN_FULL_LOGO.png"></a>
+        <!-- 로고 -->
+        <a class="navbar-brand" href="/"><img src="/images/JHSUSTAIN_FULL_LOGO.png" class="nav_logo"></a>
+
+        <!-- 햄버거 버튼 -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
@@ -34,28 +39,27 @@
 
                 <!-- Our Team -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding-right: 3rem; padding-left: .5rem">Our Team</a>
+                    <a class="nav-link" href="/Our-Team" style="padding-right: 38px;">Our Team</a>
                 </li>
 
                 <!-- Our Work -->
                 <!-- TODO: 프로젝트 추가 시 드롭다운 메뉴도 늘어나야 함 -->
                 <li class="dropdown">
-                    <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" style="padding-right: 3rem; padding-left: .5rem">Our Work <span class="glyphicon glyphicocn-menu-down"></span></a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Dropdown Item 1</a>
-                        <a href="#" class="dropdown-item">Dropdown Item 2</a>
-                        <a href="#" class="dropdown-item">Dropdown Item 3</a>
-                    </div>
+                    <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" style="padding-right: 38px;">Our Work <span class="glyphicon glyphicocn-menu-down"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/Our-Services">Our Services</a></li>
+                        <li><a class="dropdown-item" href="/Past-Ongoing-Projects">Past & Ongoing Projects</a></li>
+                    </ul>
                 </li>
 
                 <!-- In the News -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding-right: 3rem; padding-left: .5rem">In the News</a>
+                    <a class="nav-link" href="In-the-News" style="padding-right: 38px;">In the News</a>
                 </li>
 
                 <!-- Work with Us -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="padding-right: 3rem; padding-left: .5rem">Work with Us</a>
+                    <a class="nav-link" href="Work-with-Us">Work with Us</a>
                 </li>
 
             </ul>
