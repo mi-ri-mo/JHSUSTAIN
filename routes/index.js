@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'JHSUSTAIN' });
+  res.render('index', { title: 'JHSUSTAIN', banner: '/images/MAIN_BANNER.png' });
 });
 
 router.get('/Our-Team', function(req, res, next) {
@@ -11,19 +11,19 @@ router.get('/Our-Team', function(req, res, next) {
 });
 
 router.get('/Our-Services', function(req, res, next) {
-  res.render('services', { title: 'Our Services' });
+  res.render('services', { title: 'Our Services', banner: '/images/SERVICES_BANNER.png' });
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {
-  res.render('projects', { title: 'Past & Ongoing Projects' });
+  res.render('projects', { title: 'Past & Ongoing Projects', banner: '/images/PROJECTS_BANNER.png' });
 });
 
 router.get('/In-the-News', function(req, res, next) {
-  res.render('news', { title: 'In the News' });
+  res.render('news', { title: 'In the News', banner: '/images/NEWS_BANNER.png' });
 });
 
 router.get('/Work-with-Us', function(req, res, next) {
-  res.render('team', { title: 'Work with Us' });
+  res.render('team', { title: 'Work with Us', banner: '/images/CONTACT_BANNER.png' });
 });
 
 module.exports = router;
