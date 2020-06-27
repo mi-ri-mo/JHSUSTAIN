@@ -17,11 +17,12 @@
     <link rel="shortcut icon" type="image/png" href="/images/JHSUSTAIN_LOGO.png" sizes="192x192"/>
 
     <!-- CSS 연결 -->
-    <link rel='stylesheet' href='/stylesheets/navigation.css' />
+    <link rel="stylesheet" href="/stylesheets/services.css" />
+    <link rel="stylesheet" href="/stylesheets/navigation.css" />
+    <link rel="stylesheet" href="/stylesheets/banner.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
 </head>
 <body>
-
-<!-- HEADER -->
 
 <!-- NAVIGATION BAR -->
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -66,5 +67,113 @@
         </div>
     </div>
 </nav>
+
+<!-- BANNER -->
+<div class="banner" style="background: url('<%= banner %>');">
+    <div class="banner_content">
+        <div class="banner_link">
+            <a href="/">Home</a> > <a href="/Our-Services">Our Services</a>
+        </div>
+
+        <div class="banner_text">
+            Our Services
+        </div>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main_content">
+    <!-- RESEARCH -->
+    <div class="services">
+        <img src="/images/SERVICES_Research.png">
+
+        <div class="services_text">
+            <div class="services_title">
+                Research
+            </div>
+            <div class="services_content">
+                Conduct research on policies and development strategies in light of environment, inclusively climate change adaptation and mitigation, and water resources development.
+            </div>
+        </div>
+    </div>
+
+    <!-- CONSULTING -->
+    <div class="services">
+        <img src="/images/SERVICES_Consulting.png">
+
+        <div class="services_text">
+            <div class="services_title">
+                Consulting
+            </div>
+            <div class="services_content">
+                Deliver professional consulting services in order to initiate, facilitate and implement development cooperation programs to public / business and community.
+            </div>
+        </div>
+    </div>
+
+    <!-- ADVOCACY -->
+    <div class="services">
+        <img src="/images/SERVICES_Advocacy.png">
+
+        <div class="services_text">
+            <div class="services_title">
+                Advocacy
+            </div>
+            <div class="services_content">
+                Provide an alternative to the understanding of the nature-friendly policy process including the operation and maintenance of advocate coalitions, the propensity for learning and the role of science and technology in policy processes.
+            </div>
+        </div>
+    </div>
+
+    <!-- CAPACITY BUILDING -->
+    <div class="services">
+        <img src="/images/SERVICES_Capacity_Building.png">
+
+        <div class="services_text">
+            <div class="services_title">
+                Capacity building
+            </div>
+            <div class="services_content">
+                Provide professional services for capacity building of public officials and experts from developing countries and supporting the promotion of empowerment for community.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="width: 100%; height: 300px; background-color: #184C4E">
+    <div style="width: 1180px; margin-left: 370px; display: flex; align-items: center">
+        <!-- TODO: 로고 -480px-> 글씨 -->
+        <!-- LOGO -->
+        <div style="display: flex; flex-direction: column; width: 202px;">
+            <img src="/images/JHSUSTAIN_WHITE_LOGO.png" class="footer_logo_image">
+            <img src="/images/JHSUSTAIN_WHITE_COMPANY_LOGO.png" class="footer_logo_letter">
+        </div>
+
+        <!-- PAGES  -->
+        <!-- TODO: 위치 맞추기..... -->
+        <div style="display: flex; flex-direction: column; padding-left: 478px;">
+            <ul style="list-style: none;">
+                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
+                    <a href="#" style="color: white">Our Team</a>
+                </li>
+                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
+                    <a href="#" style="color: white">Our Work</a>
+                </li>
+                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
+                    <a href="#" style="color: white">In the News</a>
+                </li>
+                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
+                    <a href="#" style="color: white"      >Work with Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CONNECT -->
+        <div>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
