@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/Our-Team', function(req, res, next) {
-  res.render('team', { title: 'Our Team' });
+  res.render('team', { title: 'Our Team', banner: '/images/TEAM_BANNER.png' });
 });
 
 router.get('/Our-Services', function(req, res, next) {

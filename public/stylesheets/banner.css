@@ -1,0 +1,30 @@
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner_content {
+    width: 1180px;
+    margin-top: 48.7px;
+    line-height: 35.1px;
+}
+
+.banner_link {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.banner_link a {
+    color: white;
+}
+
+.banner_text {
+    margin-top: 13.8px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+}
