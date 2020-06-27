@@ -60,7 +60,7 @@ header {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    justify-content: center
+    justify-content: space-between;
 }
 
 .banner_left_letter {
@@ -76,7 +76,6 @@ header {
     font-weight: 500;
     color: white;
     width: 599px;
-    margin-left: 82px;
     line-height: 28.8px;
     text-align: justify
 }
