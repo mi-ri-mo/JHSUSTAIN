@@ -37,7 +37,27 @@ header {
 .banner {
     width: 100%;
     height: 820px;
-    background: url("../images/JHSUSTAIN_BANNER.png");
+    background: url("../images/MAIN_BANNER.png");
+}
+
+.banner_text {
+    width: 1180px;
+    margin-left: 373px;
+    padding-top: 265.3px;
+    color: white;
+}
+
+.banner_greeting {
+    font-size: 27.47px;
+    line-height: 32.96px;
+    font-weight: 500;
+}
+
+.banner_message {
+    width: 650px;
+    font-size: 54.93px;
+    line-height: 65.92px;
+    font-weight: bold;
 }
 
 /* BANNER CONTENT */
