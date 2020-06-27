@@ -23,7 +23,7 @@ router.get('/In-the-News', function(req, res, next) {
 });
 
 router.get('/Work-with-Us', function(req, res, next) {
-  res.render('team', { title: 'Work with Us', banner: '/images/CONTACT_BANNER.png' });
+  res.render('contact', { title: 'Work with Us', banner: '/images/CONTACT_BANNER.png' });
 });
 
 module.exports = router;
