@@ -23,6 +23,7 @@ body {
     width: 100%;
     height: 720px;
     background-color: #184C4E;
+    box-shadow: 0 0 5px #A9A9A9;
 }
 
 .member_top {

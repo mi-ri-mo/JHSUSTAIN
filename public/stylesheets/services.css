@@ -24,6 +24,7 @@ body {
 
 .services img {
     width: 680px;
+    box-shadow: 0 0 5px #A9A9A9;
 }
 
 .services_text {
