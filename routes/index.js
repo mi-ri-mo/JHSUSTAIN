@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'JHSUSTAIN', banner: '/images/MAIN_BANNER.png' });
+  res.render('index', {
+    title: 'JHSUSTAIN',
+    banner: '/images/MAIN_BANNER.png',
+    mission_images: [ '/images/MAIN1.png', '/images/MAIN2.png', '/images/MAIN3.png', '/images/MAIN4.png' ]
+  });
 });
 
 router.get('/Our-Team', function(req, res, next) {
