@@ -209,7 +209,6 @@ header {
 .projects .contents {
     width: 100%;
     height: 456px;
-    background-color: beige;
     margin-top: 31.7px;
 }
 
@@ -250,10 +249,10 @@ header {
 .text_box {
     width: 400px;
     height: 100%;
-    background-color: white;
     box-shadow: 0 0 3px rgba(82, 83, 82, .4);
-    padding-left: 29px;
-    padding-top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .text_box .title {
@@ -262,6 +261,8 @@ header {
     font-size: 20px;
     font-weight: bold;
     line-height: 24px;
+    margin-left: 29px;
+    margin-top: 27px;
 }
 
 .text_box .summary {
@@ -271,6 +272,8 @@ header {
     font-weight: 500;
     line-height: 25.6px;
     margin-top: 21.6px;
+    margin-left: 29px;
+    color: #545454;
 }
 
 .bottom {
@@ -281,7 +284,7 @@ header {
 }
 
 .bottom button {
-    width: 210px;
+    width: 180px;
     height: 70px;
     background-color: #184C4E;
     text-align: center;
@@ -322,6 +325,27 @@ header {
     width: 580px;
     height: 183px;
     box-shadow: 0 0 5px rgba(82, 83, 82, .4);
+}
+
+.news .text {
+    width: 525px;
+    height: 130px;
+    margin-top: 27px;
+    margin-left: 25px;
+}
+
+.news .title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.news .summary {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25.6px;
+    color: #545454;
 }
 
 .news .button {

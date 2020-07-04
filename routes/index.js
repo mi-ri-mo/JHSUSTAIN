@@ -22,6 +22,10 @@ router.get('/Past-Ongoing-Projects', function(req, res, next) {
   res.render('projects', { title: 'Past & Ongoing Projects', banner: '/images/PROJECTS_BANNER.png' });
 });
 
+router.get('/test', function(req, res, next) {
+  res.render('project_detail', { title: 'test' });
+});
+
 router.get('/In-the-News', function(req, res, next) {
   res.render('news', { title: 'In the News', banner: '/images/NEWS_BANNER.png' });
 });
