@@ -5,21 +5,21 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'JHSUSTAIN',
-    banner: '/images/MAIN_BANNER.png',
-    mission_images: [ '/images/MAIN1.png', '/images/MAIN2.png', '/images/MAIN3.png', '/images/MAIN4.png' ]
+    banner: '/images/banner/MAIN_BANNER.png',
+    mission_images: [ '/images/main/MAIN1.png', '/images/main/MAIN2.png', '/images/main/MAIN3.png', '/images/main/MAIN4.png' ]
   });
 });
 
 router.get('/Our-Team', function(req, res, next) {
-  res.render('team', { title: 'Our Team', banner: '/images/TEAM_BANNER.png' });
+  res.render('team', { title: 'Our Team', banner: '/images/banner/TEAM_BANNER.png' });
 });
 
 router.get('/Our-Services', function(req, res, next) {
-  res.render('services', { title: 'Our Services', banner: '/images/SERVICES_BANNER.png' });
+  res.render('services', { title: 'Our Services', banner: '/images/banner/SERVICES_BANNER.png' });
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {
-  res.render('projects', { title: 'Past & Ongoing Projects', banner: '/images/PROJECTS_BANNER.png' });
+  res.render('projects', { title: 'Past & Ongoing Projects', banner: '/images/banner/PROJECTS_BANNER.png' });
 });
 
 router.get('/test', function(req, res, next) {
@@ -27,11 +27,11 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/In-the-News', function(req, res, next) {
-  res.render('news', { title: 'In the News', banner: '/images/NEWS_BANNER.png' });
+  res.render('news', { title: 'In the News', banner: '/images/banner/NEWS_BANNER.png' });
 });
 
 router.get('/Work-with-Us', function(req, res, next) {
-  res.render('contact', { title: 'Work with Us', banner: '/images/CONTACT_BANNER.png' });
+  res.render('contact', { title: 'Work with Us', banner: '/images/banner/CONTACT_BANNER.png' });
 });
 
 module.exports = router;
