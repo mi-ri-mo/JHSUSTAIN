@@ -1,0 +1,167 @@
+관리자 테이블
+아이디(ID) varchar 10, primary key
+이름 (name) varchar 10
+비번 (password) varchar 10
+
+뉴스 테이블
+번호 (newsNo) int 5  primary key
+제목 (newsTitle) varchar 100
+날짜 (newsDate) varchar 20
+내용 (newsContent) varchar 500
+이미지 (newsImage) image
+
+프로젝트 테이블
+번호 (projectNo) int 5  primary key
+제목 (projectTitle) varchar 100
+날짜 (projectDate) varchar 20
+내용 (projectContent) varchar 500
+이미지 (projectImage) image
+
+팀 테이블
+사원아이디 (memberID) varchar 10 primary key
+이름 (memberName) varchar 10
+이메일 (memberEmail) varchar 20 
+내용 (memberContent) varchar 500
+이미지 (memberImage) image
+
+
+요구사항
+관리자가 뉴스, 프로젝트, 팀에 대한 정보가 필요하며 편집할 수 있어야 함
+관리자는 아이디, 비번, 이름 정보를 갖음
+뉴스는 번호, 제목, 날짜, 내용, 이미지 정보를 갖음
+프로젝트는 번호, 제목, 날짜, 내용, 이미지 정보를 갖음
+팀은 사원아이디, 이름, 이메일, 내용, 이미지 정보를 갖음
+
+
+CREATE TABLE admin (
+	admin_id VARCHAR(20) PRIMARY KEY,
+	name VARCHAR(20) NOT NULL
+	password VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE news (
+	news_id INT PRIMARY KEY AUTO_INCREMENT,
+	news_title VARCHAR(100) NOT NULL,
+	news_content BLOB NOT NULL,
+	news_image BLOB NOT NULL,
+	news_date DATE NOT NULL,
+	created_date DATE NOT NULL,
+	updated_date DATE NOT NULL
+);
+
+CREATE TABLE projects (
+	project_id INT PRIMARY KEY AUTO_INCREMENT,
+	project_title VARCHAR(100) NOT NULL,
+	project_content BLOB NOT NULL,
+	project_image BLOB NOT NULL,
+	project_date DATE NOT NULL,
+	created_date DATE NOT NULL,
+	updated_date DATE NOT NULL
+);
+
+CREATE TABLE member (
+	member_id INT PRIMARY KEY AUTO_INCREMENT,
+	member_name VARCHAR(20) NOT NULL,
+	member_job VARCHAR(20) NOT NULL,
+	member_email varchar(50) NOT NULL,
+	member_image varchar(50) NOT NULL,
+	created_date DATE NOT NULL,
+	updated_date DATE NOT NULL
+);
+
+CREATE TABLE member_project (
+    m_project_id INT PRIMARY KEY AUTO_INCREMENT,
+    member_id INT NOT NULL,
+    m_project_title VARCHAR(200),
+    m_project_start VARCHAR(10),
+    m_project_end VARCHAR(10)
+);
+
+// MEMBER TABLE
+INSERT INTO member (
+    member_name, member_job, member_email, member_image, created_date, updated_date
+) values (
+    'Jihyeon Park', 'Managing Director', 'ireneparkgo@jhsustain.com', '/images/member/JHSUSTAIN_Park.png', NOW(), NOW()
+);
+INSERT INTO member (
+    member_name, member_job, member_email, member_image, created_date, updated_date
+) values (
+    'Michael Bak', 'Manager', 'bakm@jhsustain.com', '/images/member/JHSUSTAIN_Bak.png', NOW(), NOW()
+);
+INSERT INTO member (
+    member_name, member_job, member_email, member_image, created_date, updated_date
+) values (
+    'Yolanda Gomez', 'Consultant', 'mail@example.com', '/images/member/JHSUSTAIN_Gomez.png', NOW(), NOW()
+);
+INSERT INTO member (
+    member_name, member_job, member_email, member_image, created_date, updated_date
+) values (
+    'Yuna Lee', 'Research', 'mail@example.com', '/images/member/JHSUSTAIN_Lee.png', NOW(), NOW()
+);
+
+// MEMBER_PROJECT TABLE
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'Researcher at Korea Institute of Civil engineering and building Technology and National Disaster Management Institute of Korea', '2005', '2011'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'Researcher at Korea Institute of Civil engineering and building Technology and National Disaster Management Institute of Korea', '2005', '2011'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'Coordinator for Asian Parliament Process for Water', '2010', '2010'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'International Standard Steering Committee, Alliance for Water Stewardship', '2011', '2011'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'Co-convener of water and disaster session for the 6th World Water Forum', '2011', '2012'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    1, 'Development Partner of ROK-ASEAN Cooperation Project on Water Resources Management', '2014', 'Present'
+);
+
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    2, 'Research Assistant in Flood Geomorphology at the University of Pennsylvania', '2011', '2014'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    2, 'Research Analyst at Renmatix', '2014', '2015'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    2, 'Development Geoscience Consultant at Uhl & Associates', '2016', '2018'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    2, 'Quality Assurance Coordinator at the Southeast Asian Mutual Assistance Associations Coalition', '2017', '2018'
+);
+INSERT INTO member_project (
+    member_id, m_project_title, m_project_start, m_project_end
+) values (
+    2, 'Water Resource Supply Specialist with the U.S. Peace Corps Response', '2018', '2019'
+);
+
+select m.member_id, m.member_name, m.member_job, m.member_email, m.member_image, mp.m_project_title, mp.m_project_start, mp.m_project_end from member m, member_project mp where m.member_id = mp.member_id;
+
+select member_id, member_name, member_job, member_email, member_image from member;
+select m_project_title, m_project_start, m_project_end from member_project where member_id = 1;
+
+select member.member_id, member_name, member_job, member_email, member_image, m_project_title, m_project_start, m_project_end from member, member_project where member.member_id = member_project.member_id;
+
+select count(*) from member_project group by member_id;

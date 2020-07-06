@@ -114,4 +114,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# etc
 /design_file/
+JHSUSTAIN_DATABASE.txt
