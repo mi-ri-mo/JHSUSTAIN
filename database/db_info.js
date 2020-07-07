@@ -4,10 +4,10 @@ module.exports = (function() {
     return {
         local: {
             // 해당 변수 안에 배열로 접속 정보 저장
-            host: 'localhost',
+            host: '3.20.224.105',
             port: '3306',
-            user: 'root',
-            password: 'mirim2',
+            user: 'jhsustain',
+            password: 't47fyf22',
             database: 'jhsustain'
         },
         real: {
