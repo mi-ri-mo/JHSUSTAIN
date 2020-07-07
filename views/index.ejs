@@ -20,6 +20,31 @@
     <link rel="stylesheet" href="/stylesheets/index.css" />
     <link rel="stylesheet" href="/stylesheets/navigation.css" />
     <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <script>
+        (function($) { // Begin jQuery
+            $(function() { // DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function(e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                // Clicking away from dropdown will remove the dropdown class
+                $('html').click(function() {
+                    $('.nav-dropdown').hide();
+                });
+                // Toggle open and close nav styles on click
+                $('#nav-toggle').click(function() {
+                    $('nav ul').slideToggle();
+                });
+                // Hamburger to X toggle
+                $('#nav-toggle').on('click', function() {
+                    this.classList.toggle('active');
+                });
+            }); // end DOM ready
+        })(jQuery); // end jQuery
+    </script>
 </head>
 <body>
 
@@ -30,48 +55,40 @@
   </div>
 
   <!-- NAVIGATION BAR -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-          <!-- 로고 -->
-          <a class="navbar-brand" href="/"><img src="/images/logo/JHSUSTAIN_FULL_LOGO.png" class="nav_logo"></a>
-
-          <!-- 햄버거 버튼 -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="glyphicon glyphicon-menu-hamburger"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-
-                  <!-- Our Team -->
-                  <li class="nav-item">
-                      <a class="nav-link" href="/Our-Team" style="padding-right: 38px;">Our Team</a>
-                  </li>
-
-                  <!-- Our Work -->
-                  <!-- TODO: 프로젝트 추가 시 드롭다운 메뉴도 늘어나야 함 -->
-                  <li class="dropdown">
-                      <a href="#" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" style="padding-right: 38px;">Our Work <span class="glyphicon glyphicocn-menu-down"></span></a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <li><a class="dropdown-item" href="/Our-Services">Our Services</a></li>
-                          <li><a class="dropdown-item" href="/Past-Ongoing-Projects">Past & Ongoing Projects</a></li>
-                      </ul>
-                  </li>
-
-                  <!-- In the News -->
-                  <li class="nav-item">
-                      <a class="nav-link" href="In-the-News" style="padding-right: 38px;">In the News</a>
-                  </li>
-
-                  <!-- Work with Us -->
-                  <li class="nav-item">
-                      <a class="nav-link" href="Work-with-Us">Work with Us</a>
-                  </li>
-
-              </ul>
-          </div>
-      </div>
-  </nav>
+  <section class="navigation" style="position: sticky; top: 10px;">
+    <div class="nav-container">
+        <div class="brand">
+            <a href="/">
+                <img src="/images/logo/JHSUSTAIN_FULL_LOGO.png" class="nav_logo" />
+            </a>
+        </div>
+        <nav>
+            <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+                <li>
+                    <a href="/Our-Team">Our Team</a>
+                </li>
+                <li>
+                    <a href="#!">Our Work</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="/Our-Services">Our Services</a>
+                        </li>
+                        <li>
+                            <a href="/Past-Ongoing-Projects">Past & Ongoing Projects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#!">In the News</a>
+                </li>
+                <li>
+                    <a href="#!" style="padding-right: 0px;">Work with Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+  </section>
 </header>
 
 <!-- BANNER -->
@@ -106,174 +123,176 @@
 </div>
 
 <!-- MAIN CONTENT -->
-<div class="main_content">
-    <!-- MISSION AND VISION -->
-    <div class="mission">
-        <!-- TEXT -->
-        <div class="mission_text">
-            <p class="mission_title">Mission and Vision Statements</p>
+<div style="display: flex; justify-content: center;">
+    <div class="main_content">
+        <!-- MISSION AND VISION -->
+        <div class="mission">
+            <!-- TEXT -->
+            <div class="mission_text">
+                <p class="mission_title">Mission and Vision Statements</p>
 
-            <p class="mission_sub_title">JHSUSTAIN's sustainability practice truly supports the globe based on its pioneering work.</p>
+                <p class="mission_sub_title">JHSUSTAIN's sustainability practice truly supports the globe based on its pioneering work.</p>
 
-            <p class="mission_content">
-                Our mission is to make meaningful impacts for global society, share inclusive sustainable development practices and enhance our global capacity for climate change adaptation. We will achieve this through active participation in the advocacy, planning and implementation of international development programs with developing countries whilst building partnerships with international stakeholders within the water, climate change and environment sectors.
-            </p>
-        </div>
-
-        <!-- IMAGES -->
-        <div class="mission_images">
-            <div class="mission_image" style="background: url('<%= mission_images[0] %>')">
-                <p style="">
-                    Creation of work area in climate change
+                <p class="mission_content">
+                    Our mission is to make meaningful impacts for global society, share inclusive sustainable development practices and enhance our global capacity for climate change adaptation. We will achieve this through active participation in the advocacy, planning and implementation of international development programs with developing countries whilst building partnerships with international stakeholders within the water, climate change and environment sectors.
                 </p>
             </div>
-            <div class="mission_image" style="background: url('<%= mission_images[1] %>')">
-                <p style="">
-                    Advancement of quality in develop program planning
-                </p>
-            </div>
-            <div class="mission_image" style="background: url('<%= mission_images[2] %>')">
-                <p style="width: 245px;">
-                    Program implementation based on diverse partnership
-                </p>
-            </div>
-            <div class="mission_image" style="background: url('<%= mission_images[3] %>')">
-                <p style="">
-                    Paradigm shift of development projects
-                </p>
-            </div>
-        </div>
 
-        <!-- SUSTAIN -->
-        <div class="vision">
-            <!-- S -->
-            <span class="vision_text">
+            <!-- IMAGES -->
+            <div class="mission_images">
+                <div class="mission_image" style="background: url('<%= mission_images[0] %>')">
+                    <p style="">
+                        Creation of work area in climate change
+                    </p>
+                </div>
+                <div class="mission_image" style="background: url('<%= mission_images[1] %>')">
+                    <p style="">
+                        Advancement of quality in develop program planning
+                    </p>
+                </div>
+                <div class="mission_image" style="background: url('<%= mission_images[2] %>')">
+                    <p style="width: 245px;">
+                        Program implementation based on diverse partnership
+                    </p>
+                </div>
+                <div class="mission_image" style="background: url('<%= mission_images[3] %>')">
+                    <p style="">
+                        Paradigm shift of development projects
+                    </p>
+                </div>
+            </div>
+
+            <!-- SUSTAIN -->
+            <div class="vision">
+                <!-- S -->
+                <span class="vision_text">
                 <span>S</span>hepherd for
             </span>
-            <!-- U -->
-            <span class="vision_text">
+                <!-- U -->
+                <span class="vision_text">
                 <span>U</span>niverse by
             </span>
-            <!-- S -->
-            <span class="vision_text">
+                <!-- S -->
+                <span class="vision_text">
                 Paradigm <span>S</span>hift
             </span>
-            <!-- T -->
-            <span class="vision_text">
+                <!-- T -->
+                <span class="vision_text">
                 <span>T</span>hrough
             </span>
-            <!-- A -->
-            <span class="vision_text">
+                <!-- A -->
+                <span class="vision_text">
                 <span>A</span>dept
             </span>
-            <!-- I -->
-            <span class="vision_text">
+                <!-- I -->
+                <span class="vision_text">
                 <span>I</span>ntelligence
             </span>
-            <!-- N -->
-            <span class="vision_text">
+                <!-- N -->
+                <span class="vision_text">
                 <span>N</span>exus
             </span>
+            </div>
         </div>
-    </div>
 
-    <!-- PAST PROJECTS WIDGET -->
-    <div class="projects">
-        <p>
-            Widget with Past Projects
-        </p>
+        <!-- PAST PROJECTS WIDGET -->
+        <div class="projects">
+            <p>
+                Widget with Past Projects
+            </p>
 
-        <div class="contents">
-            <div class="contents_box">
-                <div class="arrows">
-                    <img src="images/MAIN_LEFT_ARROW.png" />
+            <div class="contents">
+                <div class="contents_box">
+                    <div class="arrows">
+                        <img src="images/MAIN_LEFT_ARROW.png" />
+                    </div>
+
+                    <div class="content">
+                        <div class="project_image">
+                            <!-- 여기에 이미지 넣기 -->
+                        </div>
+
+                        <div class="text_box">
+                            <div>
+                                <div class="title">
+                                    Climate Resilience Flood Management through Ecosystem-based Adaptation
+                                </div>
+
+                                <div class="summary">
+                                    JHSUSTAIN is working in partnership with the Korea Institute of Civil Engineering and Construction Technology (KICT) to build the resilience of Leyte’s most exposed municipalities and promote a paradigm shift in....
+                                </div>
+                            </div>
+
+                            <div class="bottom">
+                                <button>
+                                    Read more <img src="images/button_arrow.png">
+                                </button>
+
+                                <div style="width: 162px; height: 70px; color: #7B7B7B; font-size: 16px; font-weight: 500; line-height: 19.2px; padding-right: 29px; padding-top: 23.2px;">
+                                    January 16, 2020
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrows">
+                        <img src="images/MAIN_RIGHT_ARROW.png" />
+                    </div>
+                </div>
+
+                <div style="width: 273px; height: 5px; margin-left: 80px; margin-top: 20px; display: flex; justify-content: space-between;">
+                    <div style="width: 61.03px; height: 5px; background-color: #184C4E;">
+                    </div>
+                    <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
+                    </div>
+                    <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
+                    </div>
+                    <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEWS WIDGET -->
+        <div class="news">
+            <!-- TITLE -->
+            <p>
+                News Widget
+            </p>
+
+            <!-- NEWS CONTENT -->
+            <div class="box">
+                <div class="content">
+                    <div class="text">
+                        <div class="title">
+                            Korea-ASEAN Summit & Korea-Mekong Summit
+                        </div>
+                        <div class="summary">
+                            The “Korea-ASEAN Summit” and the 1st “Korea-Mekong Summit” were held on the 25th – 27th in Busan....
+                        </div>
+                    </div>
                 </div>
 
                 <div class="content">
-                    <div class="project_image">
-                        <!-- 여기에 이미지 넣기 -->
-                    </div>
-
-                    <div class="text_box">
-                        <div>
-                            <div class="title">
-                                Climate Resilience Flood Management through Ecosystem-based Adaptation
-                            </div>
-
-                            <div class="summary">
-                                JHSUSTAIN is working in partnership with the Korea Institute of Civil Engineering and Construction Technology (KICT) to build the resilience of Leyte’s most exposed municipalities and promote a paradigm shift in....
-                            </div>
+                    <div class="text">
+                        <div class="title">
+                            Korea-ASEAN Summit & Korea-Mekong Summit
                         </div>
-
-                        <div class="bottom">
-                            <button>
-                                Read more <img src="images/button_arrow.png">
-                            </button>
-
-                            <div style="width: 162px; height: 70px; color: #7B7B7B; font-size: 16px; font-weight: 500; line-height: 19.2px; padding-right: 29px; padding-top: 23.2px;">
-                                January 16, 2020
-                            </div>
+                        <div class="summary">
+                            The “Korea-ASEAN Summit” and the 1st “Korea-Mekong Summit” were held on the 25th – 27th in Busan....
                         </div>
                     </div>
                 </div>
-
-                <div class="arrows">
-                    <img src="images/MAIN_RIGHT_ARROW.png" />
-                </div>
             </div>
 
-            <div style="width: 273px; height: 5px; margin-left: 80px; margin-top: 20px; display: flex; justify-content: space-between;">
-                <div style="width: 61.03px; height: 5px; background-color: #184C4E;">
-                </div>
-                <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
-                </div>
-                <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
-                </div>
-                <div style="width: 61.03px; height: 5px; background-color: #ABABAB;">
-                </div>
+            <!-- BUTTON -->
+            <div class="button">
+                <button>
+                    See all News <img src="images/button_arrow.png">
+                </button>
             </div>
+
         </div>
-    </div>
-
-    <!-- NEWS WIDGET -->
-    <div class="news">
-        <!-- TITLE -->
-        <p>
-            News Widget
-        </p>
-
-        <!-- NEWS CONTENT -->
-        <div class="box">
-            <div class="content">
-                <div class="text">
-                    <div class="title">
-                        Korea-ASEAN Summit & Korea-Mekong Summit
-                    </div>
-                    <div class="summary">
-                        The “Korea-ASEAN Summit” and the 1st “Korea-Mekong Summit” were held on the 25th – 27th in Busan....
-                    </div>
-                </div>
-            </div>
-
-            <div class="content">
-                <div class="text">
-                    <div class="title">
-                        Korea-ASEAN Summit & Korea-Mekong Summit
-                    </div>
-                    <div class="summary">
-                        The “Korea-ASEAN Summit” and the 1st “Korea-Mekong Summit” were held on the 25th – 27th in Busan....
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- BUTTON -->
-        <div class="button">
-            <button>
-                See all News <img src="images/button_arrow.png">
-            </button>
-        </div>
-
     </div>
 </div>
 
