@@ -41,7 +41,10 @@ router.get('/Our-Team', function(req, res, next) {
 });
 
 router.get('/Our-Services', function(req, res, next) {
-  res.render('services', { title: 'Our Services', banner: '/images/banner/SERVICES_BANNER.png' });
+  res.render('services', {
+    title: 'Our Services',
+    banner: [ '/images/banner/SERVICES_BANNER.png', '/images/banner/services_banner_mobile.png' ]
+  });
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {

@@ -86,7 +86,7 @@
 </section>
 
 <!-- BANNER -->
-<div class="banner" style="background: url('<%= banner %>');">
+<div class="banner" style="background: url('<%= banner[0] %>');">
     <div class="banner_content">
         <div class="banner_link">
             <a href="/">Home</a> > <a href="/In-the-News">In the News</a>
@@ -94,6 +94,19 @@
 
         <div class="banner_text">
             In the News
+        </div>
+    </div>
+</div>
+
+<!-- MOBILE BANNER -->
+<div class="banner_mobile" style="background: url('<%= banner[1] %>');">
+    <div class="banner_content_mobile">
+        <div class="banner_link_mobile">
+            <a href="/">Home</a> > <a href="/In-the-News">In-the-News</a>
+        </div>
+
+        <div class="banner_text_mobile">
+            In-the-News
         </div>
     </div>
 </div>
