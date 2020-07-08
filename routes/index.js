@@ -56,7 +56,10 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/In-the-News', function(req, res, next) {
-  res.render('news', { title: 'In the News', banner: '/images/banner/NEWS_BANNER.png' });
+  res.render('news', {
+    title: 'In the News',
+    banner: [ '/images/banner/NEWS_BANNER.png', '/images/banner/news_banner_mobile.png' ]
+  });
 });
 
 router.get('/Work-with-Us', function(req, res, next) {
