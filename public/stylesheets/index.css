@@ -32,11 +32,20 @@ header {
     font-size: 16px;
     font-weight: 500;
 }
+
 @media only screen and (max-width: 798px) {
     header {
         height: 70px;
     }
     .header {
+        display: none;
+    }
+    .banner, .banner_content, .main_contents, .main_content {
+        display: none;
+    }
+}
+@media screen and (min-width: 799px) {
+    .mobile_banner, .mobile_banner_content, .mobile_main_contents, .mobile_main_content {
         display: none;
     }
 }
@@ -67,6 +76,34 @@ header {
     line-height: 65.92px;
     font-weight: bold;
 }
+
+/* MOBILE BANNER */
+.mobile_banner {
+    width: 100%;
+    height: 758px;
+    background: url('../images/banner/MAIN_BANNER.png');
+}
+
+.mobile_banner_text {
+    width: 688px;
+    margin-left: 31px;
+    padding-top: 220px;
+    color: white;
+}
+
+.mobile_banner_greeting {
+    font-size: 23.84px;
+    font-weight: 500;
+    line-height: 28.6px;
+}
+
+.mobile_banner_message {
+    margin-top: 16.5px;
+    font-size: 47.67px;
+    font-weight: 700;
+    line-height: 57.21px;
+}
+
 
 /* BANNER CONTENT */
 .banner_content {
@@ -108,11 +145,71 @@ header {
     text-align: justify
 }
 
+/* MOBILE BANNER CONTENT */
+.mobile_banner_content {
+    width: 686px;
+    height: 320px;
+    background-color: #184C4E;
+    margin-left: 63px;
+    position: absolute;
+    right: 0;
+    top: 686px;
+    z-index: 10;
+}
+
+.mobile_banner_letter {
+    width: 587px;
+    height: 222.7px;
+    margin-left: 66px;
+    margin-top: 46.3px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile_banner_left_letter {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    width: 500px;
+    height: 63px;
+    line-height: 31.22px;
+}
+
+.mobile_banner_right_letter {
+    font-size: 16.8px;
+    font-weight: 500;
+    color: white;
+    width: 587px;
+    height: 140px;
+    line-height: 28.8px;
+    text-align: justify
+}
+
+
 /* MAIN */
+.main_contents {
+    display: flex;
+    justify-content: center;
+}
+
 .main_content {
     width: 1180px;
     height: 2051px;
 }
+
+/* MOBILE MAiN */
+.mobile_main_contents {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile_main_content {
+    width: 100%;
+    height: 3407px;
+}
+
 
 /* MISSION */
 .mission {
@@ -174,6 +271,75 @@ header {
     width: 208px;
 }
 
+/* MOBILE MISSION */
+.mobile_mission {
+    width: 100%;
+    height: 1843px;
+    padding-top: 255.3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding-bottom: 35.8px;*/
+}
+
+.mission_text_mobile {
+    width: 100%;
+    height: 280.2px;
+    text-align: center;
+    margin-bottom: 35.6px;
+}
+
+.mission_title_mobile {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35.1px;
+}
+
+.mission_sub_title_mobile {
+    margin-top: 30.9px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25.6px;
+    color: #184C4E;
+    text-align: left;
+}
+
+.mission_content_mobile {
+    margin-top: 15.3px;
+    font-size: 15.2px;
+    font-weight: 500;
+    line-height: 25.58px;
+    text-align: justify;
+}
+
+.mission_images_mobile {
+    height: 1190px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mission_image_mobile {
+    width: 686px;
+    height: 275px;
+    background-color: gray;
+    box-shadow: 0 0 5px rgba(82, 83, 82, .4);
+    display: flex;
+    align-items: flex-end;
+}
+
+.mission_image_mobile p {
+    margin-left: 30.1px;
+    margin-bottom: 30.3px;
+    color: white;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 20px;
+    width: 235px;
+}
+
+
 /* VISION */
 .vision {
     height: 54px;
@@ -195,6 +361,38 @@ header {
 .vision_text span {
     color: #184C4E;
     font-size: 23px;
+    font-weight: 700;
+}
+
+/* MOBILE VISION */
+.vision_mobile {
+    width: 100%;
+    height: 82px;
+    background-color: #D3D3D3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    box-shadow: 0 0 5px #A9A9A9;
+}
+
+.vision_texts_mobile {
+    width: 573px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vision_text_mobile {
+    color: #5F6869;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.vision_text_mobile span {
+    color: #184C4E;
+    font-size: 25px;
     font-weight: 700;
 }
 
@@ -274,13 +472,17 @@ header {
 
 .text_box .summary {
     width: 350px;
-    height: 175px;
+    max-height: 175px;
+    overflow: hidden;
     font-size: 16px;
     font-weight: 500;
     line-height: 25.6px;
     margin-top: 21.6px;
     margin-left: 29px;
     color: #545454;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
 }
 
 .bottom {
@@ -306,6 +508,171 @@ header {
     width: 25.31px;
     height: 9.5px;
 }
+
+.project_date {
+    width: 162px;
+    height: 70px;
+    color: #7B7B7B;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    padding-right: 29px;
+    padding-top: 23.2px;
+}
+
+.progress_bar {
+    width: 273px;
+    height: 5px;
+    margin-left: 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 61.03px;
+    height: 5px;
+    background-color: #ABABAB;
+}
+
+/* MOBILE PROJECTS */
+.projects_mobile {
+    width: 100%;
+    height: 794px;
+    padding-top: 95.3px;
+}
+
+.projects_mobile p {
+    height: 37px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35.08px;
+    text-align: center;
+}
+
+.projects_mobile .contents_mobile {
+    width: 100%;
+    height: 635px;
+    margin-top: 31.7px;
+}
+
+.projects_mobile .contents_box_mobile {
+    width: 100%;
+    height: 605px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows_mobile {
+    width: 70px;
+    height: 70px;
+    background-color: #788283;
+}
+
+.arrows_mobile img {
+    width: 21px;
+    height: 39px;
+    margin-top: 15.8px;
+    margin-left: 25px;
+}
+
+.content_mobile {
+    width: 573px;
+    height: 605px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_image_mobile {
+    width: 100%;
+    height: 351px;
+    background-color: #ABABAB;
+}
+
+.text_box_mobile {
+    width: 100%;
+    height: 254px;
+    box-shadow: 0 0 1px rgba(82, 83, 82, .4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text_box_mobile .title_mobile {
+    width: 506px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-left: 30px;
+    margin-top: 27.3px;
+}
+
+.text_box_mobile .summary_mobile {
+    width: 506px;
+    max-height: 72px;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    margin-top: 9.5px;
+    margin-left: 30px;
+    color: #545454;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.bottom_mobile {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom_mobile button {
+    width: 180px;
+    height: 70px;
+    background-color: #184C4E;
+    text-align: center;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgba(82, 83, 82, .4);
+}
+
+.bottom_mobile button img {
+    width: 25.31px;
+    height: 9.5px;
+}
+
+.project_date_mobile {
+    color: #7B7B7B;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    padding-right: 29px;
+    padding-top: 25px;
+}
+
+.progress_bar_mobile {
+    width: 273px;
+    height: 5px;
+    margin-left: 90px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar_mobile {
+    width: 61.03px;
+    height: 5px;
+    background-color: #ABABAB;
+}
+
 
 /* NEWS */
 .news {
@@ -339,6 +706,9 @@ header {
     height: 130px;
     margin-top: 27px;
     margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .news .title {
@@ -348,11 +718,24 @@ header {
 }
 
 .news .summary {
+    max-height: 45px;
+    overflow: hidden;
     margin-top: 20px;
     font-size: 15px;
     font-weight: 500;
     line-height: 25.6px;
     color: #545454;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news .news_date {
+    width: 100%;
+    color: #7C7C7C;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: right;
 }
 
 .news .button {
@@ -377,12 +760,92 @@ header {
     height: 9.5px;
 }
 
-/* IPhone X */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-    .your-class-here {
-        background:black;
-    }
+/* MOBILE NEWS */
+.news_mobile {
+    width: 100%;
+    height: 770px;
+    padding-top: 95.3px;
+    padding-bottom: 100px;
 }
+
+.news_mobile p {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35.09px;
+    text-align: center;
+}
+
+.news_mobile .box {
+    height: 395px;
+    margin-top: 41.7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news_mobile .content {
+    width: 686px;
+    height: 187px;
+    box-shadow: 0 0 2px rgba(82, 83, 82, .4);
+}
+
+.news_mobile .text {
+    width: 625px;
+    height: 136px;
+    margin-top: 24px;
+    margin-left: 31px;
+}
+
+.news_mobile .title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.news_mobile .summary {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30.28px;
+    color: #545454;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news_mobile .news_date {
+    margin-top: 28.6px;
+    width: 100%;
+    color: #7C7C7C;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: right;
+}
+
+.news_mobile .button {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.news_mobile .button button {
+    width: 210px;
+    height: 70px;
+    background-color: #184C4E;
+    text-align: center;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgba(82, 83, 82, .4);
+}
+
+.news_mobile .button img {
+    width: 25.31px;
+    height: 9.5px;
+}
+
+
 
 
 /*.carousel-item {*/

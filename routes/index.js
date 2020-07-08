@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'JHSUSTAIN',
     banner: '/images/banner/MAIN_BANNER.png',
-    mission_images: [ '/images/main/MAIN1.png', '/images/main/MAIN2.png', '/images/main/MAIN3.png', '/images/main/MAIN4.png' ]
+    mission_images: [ '/images/main/MAIN1.png', '/images/main/MAIN2.png', '/images/main/MAIN3.png', '/images/main/MAIN4.png' ],
+    mobile_mission_images: [ '/images/main/mobile_main1.png', '/images/main/mobile_main2.png', '/images/main/mobile_main3.png', '/images/main/mobile_main4.png' ]
   });
 });
 

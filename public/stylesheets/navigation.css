@@ -79,8 +79,8 @@ nav ul li ul li a {
   top: 0;
   right: 0;
   background: #fff;
-  height: 26px;
-  width: 35px;
+  height: 70px;
+  width: 70px;
 }
 @media only screen and (max-width: 798px) {
   .nav-mobile {
