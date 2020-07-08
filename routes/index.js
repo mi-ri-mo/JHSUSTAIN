@@ -36,7 +36,7 @@ router.get('/Our-Team', function(req, res, next) {
   });
   res.render('team', {
     title: 'Our Team',
-    banner: '/images/banner/TEAM_BANNER.png'
+    banner: [ '/images/banner/TEAM_BANNER.png', '/images/banner/team_banner_mobile.png' ]
   });
 });
 
