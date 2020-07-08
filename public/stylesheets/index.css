@@ -37,10 +37,7 @@ header {
     header {
         height: 70px;
     }
-    .header {
-        display: none;
-    }
-    .banner, .banner_content, .main_contents, .main_content {
+    .header, .banner, .banner_content, .main_contents, .main_content {
         display: none;
     }
 }
