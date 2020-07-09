@@ -124,19 +124,25 @@
         </div>
         <!-- CONTENT -->
         <div class="project">
-            <div class="content">
+            <%
+            const length = Object.keys(projectList).length;
+            for (let i = 1; i < length + 1; i++) {
+                console.log(projectList[i])
+            %>
+                <div class="content">
                 <!-- IMAGE -->
                 <div class="image">
+                    <img src="<%= projectList[i].project_image %>">
                 </div>
 
                 <!-- TEXT -->
                 <div class="text">
                     <div class="box">
                         <div class="title">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
+                            <%= projectList[i].project_title %>
                         </div>
                         <div class="summary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            <%= projectList[i].project_summary %>
                         </div>
                     </div>
 
@@ -146,94 +152,9 @@
                     </button>
                 </div>
             </div>
-            <div class="content">
-                <!-- IMAGE -->
-                <div class="image">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text">
-                    <div class="box">
-                        <div class="title">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content">
-                <!-- IMAGE -->
-                <div class="image">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text">
-                    <div class="box">
-                        <div class="title">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content">
-                <!-- IMAGE -->
-                <div class="image">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text">
-                    <div class="box">
-                        <div class="title">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content">
-                <!-- IMAGE -->
-                <div class="image">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text">
-                    <div class="box">
-                        <div class="title">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
+            <%
+            }
+            %>
         </div>
 
         <div>
@@ -255,9 +176,8 @@
         <!-- CONTENT -->
         <div class="project_mobile">
             <%
-                const length = Object.keys(projectList).length;
                 for (let i = 1; i < length + 1; i++) {
-                    console.log(projectList[i])
+                    console.log(projectList[i]);
             %>
             <div class="content_mobile">
                 <!-- IMAGE -->
