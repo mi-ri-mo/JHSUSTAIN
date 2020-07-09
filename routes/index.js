@@ -48,9 +48,24 @@ router.get('/Our-Services', function(req, res, next) {
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {
-  res.render('projects', {
-    title: 'Past & Ongoing Projects',
-    banner: [ '/images/banner/PROJECTS_BANNER.png', '/images/banner/project_banner_mobile.png' ]
+  let projectList = {
+    1: [],
+    2: [],
+    3: []
+  };
+  let query = "SELECT * FROM projects ORDER BY project_id DESC";
+  connection.query(query, (err, result) => {
+    if (err) {
+      return res.send(err);
+    }
+    for (let i = 0; i < result.length; i++) {
+      projectList[result[i].project_id] = result[i];
+    }
+    res.render('projects', {
+      title: 'Past & Ongoing Projects',
+      banner: [ '/images/banner/PROJECTS_BANNER.png', '/images/banner/project_banner_mobile.png' ],
+      projectList: projectList
+    });
   });
 });
 

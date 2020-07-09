@@ -108,7 +108,7 @@ body {
 /* MOBILE */
 .main_content_mobile {
     width: 100%;
-    height: 3891px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,8 +144,9 @@ body {
 
 .project_mobile {
     width: 100%;
-    height: 3165px;
+    height: auto;
     margin-top: -35px;
+    margin-bottom: 191px;
 }
 
 .project_mobile .content_mobile {
@@ -213,6 +214,10 @@ body {
 .button_mobile img {
     width: 25.31px;
     height: 9.5px;
+}
+
+.button_mobile:hover {
+    background-color: #49938C;
 }
 
 @media only screen and (max-width: 798px) {

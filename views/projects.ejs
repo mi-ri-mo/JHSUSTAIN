@@ -254,6 +254,11 @@
         </div>
         <!-- CONTENT -->
         <div class="project_mobile">
+            <%
+                const length = Object.keys(projectList).length;
+                for (let i = 1; i < length + 1; i++) {
+                    console.log(projectList[i])
+            %>
             <div class="content_mobile">
                 <!-- IMAGE -->
                 <div class="image_mobile">
@@ -263,10 +268,10 @@
                 <div class="text_mobile">
                     <div class="box_mobile">
                         <div class="title_mobile">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
+                            <%= projectList[i].project_title %>
                         </div>
                         <div class="summary_mobile">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            <%= projectList[i].project_summary %>
                         </div>
                     </div>
 
@@ -276,94 +281,9 @@
                     </button>
                 </div>
             </div>
-            <div class="content_mobile">
-                <!-- IMAGE -->
-                <div class="image_mobile">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text_mobile">
-                    <div class="box_mobile">
-                        <div class="title_mobile">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary_mobile">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button_mobile">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content_mobile">
-                <!-- IMAGE -->
-                <div class="image_mobile">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text_mobile">
-                    <div class="box_mobile">
-                        <div class="title_mobile">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary_mobile">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button_mobile">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content_mobile">
-                <!-- IMAGE -->
-                <div class="image_mobile">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text_mobile">
-                    <div class="box_mobile">
-                        <div class="title_mobile">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary_mobile">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button_mobile">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
-            <div class="content_mobile">
-                <!-- IMAGE -->
-                <div class="image_mobile">
-                </div>
-
-                <!-- TEXT -->
-                <div class="text_mobile">
-                    <div class="box_mobile">
-                        <div class="title_mobile">
-                            Building Resillience for Sustainable ASEAN from Water-related Disasters
-                        </div>
-                        <div class="summary_mobile">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        </div>
-                    </div>
-
-                    <!-- BUTTON -->
-                    <button class="button_mobile">
-                        Read more <img src="images/button_arrow.png">
-                    </button>
-                </div>
-            </div>
+            <%
+                }
+            %>
         </div>
 
         <div>

@@ -52,9 +52,13 @@ CREATE TABLE news (
 CREATE TABLE projects (
 	project_id INT PRIMARY KEY AUTO_INCREMENT,
 	project_title VARCHAR(100) NOT NULL,
-	project_content BLOB NOT NULL,
-	project_image BLOB NOT NULL,
-	project_date DATE NOT NULL,
+	project_summary BLOB NOT NULL,
+	project_objectives BLOB NOT NULL,
+	project_period VARCHAR(50) NOT NULL,
+	project_locations VARCHAR(50) NOT NULL,
+	project_implementation BLOB NOT NULL,
+	project_partners BLOB NOT NULL,
+	project_link BLOB NOT NULL,
 	created_date DATE NOT NULL,
 	updated_date DATE NOT NULL
 );
@@ -165,3 +169,42 @@ select m_project_title, m_project_start, m_project_end from member_project where
 select member.member_id, member_name, member_job, member_email, member_image, m_project_title, m_project_start, m_project_end from member, member_project where member.member_id = member_project.member_id;
 
 select count(*) from member_project group by member_id;
+
+INSERT INTO `projects`(`project_title`, `project_summary`, `project_objectives`, `project_period`, `project_locations`, `project_implementation`, `project_partners`, `project_link`, `created_date`, `updated_date`) VALUES (
+'IoT 4 Mekong Delta, Viet Nam',
+'JHSUSTAIN is working in collaboration with Green Technology Center Korea (GTCK) piloting IoT technological solutions for Flood Management in the Mekong Delta region. This project has been accepted for funding by Partnering for Green Growth and the Global Goals 2030 (P4G), a global initiative for developing public-private partnerships at scale to deliver on the SDGs and the Paris Climate Agreement. IoT 4 Mekong Delta Viet Nam is a partnership to develop a Danish-Korean solution relying on IoT to collect data and simulate flooding events in the cities of the Mekong Delta, with the aim of further developing cost-efficient and innovative solutions to protect assets and livelihoods in the region. The partnership collaborates with commercial smart water management experts as well as IoT experts from Denmark, Korea and Viet Nam in a project consortium. As a project implementing agency, JHSUSTAIN provides support to create an effective business model for the region, and to scale up the partnership.',
+'Provision of an improved data collection and modelling to unleash potential green growth development in the targeted area through enhanced flood management. This could include developing ICT-based data collection and early warning systems in the lower Mekong River, supporting local governance through enhanced databasing, using data to protect rice paddy from devastating flooding, and growing the region’s freshwater aquaculture.',
+'2020 - End of 2021 (Est.)',
+'The Mekong Delta in southwestern Viet Nam is home to more than 17 million people and an important agricultural and fishing region. A low-lying coastal region, the Mekong Delta is prone to flooding that experts predict will get worse due to climate change and rising sea levels.',
+'Install smart sensors and actuators to improve disaster forecast accuracy and on-site response./Create a model to better predict and manage flood events in the region/Provide local municipal governments with a real-time digital application for simulating flooding events which includes advanced flood maps and three-dimensional video for simulating flood scenarios./Reduce human casualties from flooding while enhancing disaster resilience of the community and protecting agricultural production and community livelihoods',
+'CLEAN/Green Technology Center (GTC)/Center for Regional and Urban Studies (CRUS)/Other Local Government Representatives & Communities/Local NGOs',
+'https://p4gpartnerships.org/partnership/iot-4-mekong-delta-Viet Nam',
+now(),
+now()
+)
+
+INSERT INTO `projects`(`project_title`, `project_summary`, `project_objectives`, `project_period`, `project_locations`, `project_implementation`, `project_partners`, `project_link`, `created_date`, `updated_date`) VALUES (
+'Building Resilience for Sustainable ASEAN (from Water-related Disasters)',
+'In association with the ASEAN-ROK collaboration, JHSUSTAIN is coordinating between the Republic of Korea and ASEAN Member States in the joint project, “Building Resilience for Sustainable ASEAN”, aimed at finding policy and development solutions to mitigating the impacts of water-related disaster in the ASEAN region.\nThe first phase of this project was completed in 2016, which required ASEAN members to compose National Assessment Reports portraying their own nation’s status-quo in terms of water-related disasters. These highlighted their experiences and their national policies, which aim at mitigating the impacts of disastrous events. JHSUSTAIN assisted the respective ASEAN Members in writing their own proposal by offering consultation services, cross-analyzing the various proposals and drafting the desired common outputs of the project. The outcome of this phase was the drafting of an ASEAN Regional Agenda for a safer ASEAN, where member states have identified their possible areas of cooperation in mitigation and adaptation to water-related disasters and outline the possible benefits of the ASEAN-ROK collaboration.\nExpanding from the first phase of the project, the second phase is now on-going as a multi-year program, over a two or three years period under a budget of approximately US$ 1 million.',
+'To strengthen resilience in the ASEAN Member States against water-related disasters in Southeast Asia through close cooperation between ASEAN and Korea, by sharing knowledge and experience for effective policymaking in the respective national governments.',
+'2015 - End of 2021 (Est.)',
+'RoK - ASEAN',
+'',
+'RoK and ASEAN Member countries',
+'Building Resilience for Sustainable ASEAN from Water-Related Disasters Executive Summary Report \n http://environment.asean.org/wp-content/uploads/2018/04/Building-Resilience-for-Sustainable-ASEAN-from-Water-Related-Disasters_Executive-Summary-Report_small.pdf',
+now(),
+now()
+)
+
+INSERT INTO `projects`(`project_title`, `project_summary`, `project_objectives`, `project_period`, `project_locations`, `project_implementation`, `project_partners`, `project_link`, `created_date`, `updated_date`) VALUES (
+'Asian Water Development Outlook 2020 - Key Dimension 5: Water-Related Disaster Risk',
+'Working alongside the Korea Institute of Civil Engineering and Building Technology (KICT), JHSUSTAIN lent its expertise in researching water-related disaster in Asia as it relates to international policy and the assessment of vulnerabilities. Together, KICT and JHSUSTAIN worked with the Asian Development Bank (ADB) to develop one of the five “key dimensions” used to assess water security by ADB’s flagship AWDO report series. Key Dimension 5 (KD5) is a national-level index assessing risk factors of water-related disaster based on data from a range of international organizations. This product is used by ADB as a communication tool when engaging with client states in Asia and the Pacific to highlight strengths and weaknesses of their nation’s water security. KD5 is focused on water-related disaster, namely those related to flood, droughts, and storm.\nKICT and JHSUSTAIN worked alongside the International Water Management Institute (IWMI), the International Water Centre (IWC), the Organisation for Economic Co-operation and Development (OECD), and government research teams from a range of countries from Asia and the Pacific in supporting ADB to develop this report. Three workshops were hosted by ADB in 2019 where researchers from the project team discussed ideas related to work being done on their own key dimension and offered advise to other teams in their research. The result is a report developed by scientists and academics from dozens of countries throughout the world which brings to the forefront many fields of research related to water-security.',
+'The main objective of KD5 is to support regional cooperation and understanding of water-related disaster, based in the most up-to-date research, throughout Asia and the Pacific. By offering ADB a science-based tool for engaging nations on security against the risks posed by water-related disasters, KICT and JHSUSTAIN anticipate better informed decision-making surrounding how ADB’s resources are delivered for disaster-risk-related projects. An Asia-Pacific region where financial decision making is driven by scientific research will be better protected from disaster and more able to adapt to climate change.',
+'2019 - 2020',
+'Asia and the Pacific',
+'',
+'Asian Development Bank; Korea Institute of Civil Engineering and Building Technology',
+'Water Security for all: Asian Water Development Outlook 2020 Press Release from World Water Week \n https://www.worldwaterweek.org/event/8683-water-security-for-all-asian-water-development-outlook-2020',
+now(),
+now()
+)
