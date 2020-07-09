@@ -175,14 +175,14 @@ body {
 .map {
     width: 580px;
     height: 580px;
-    background-color: #B1B1B1;
+    /*background-color: #B1B1B1;*/
     box-shadow: 0 0 3px rgba(82, 83, 82, .4);
 }
 
-.main_content_mobile .map {
+.map_mobile {
     width: 684.48px;
     height: 684.81px;
-    background-color: #B1B1B1;
+    /*background-color: #B1B1B1;*/
     box-shadow: 0 0 3px rgba(82, 83, 82, .4);
 }
 

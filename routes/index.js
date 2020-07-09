@@ -48,7 +48,10 @@ router.get('/Our-Services', function(req, res, next) {
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {
-  res.render('projects', { title: 'Past & Ongoing Projects', banner: '/images/banner/PROJECTS_BANNER.png' });
+  res.render('projects', {
+    title: 'Past & Ongoing Projects',
+    banner: [ '/images/banner/PROJECTS_BANNER.png', '/images/banner/project_banner_mobile.png' ]
+  });
 });
 
 router.get('/test', function(req, res, next) {
