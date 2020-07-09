@@ -63,7 +63,10 @@ router.get('/In-the-News', function(req, res, next) {
 });
 
 router.get('/Work-with-Us', function(req, res, next) {
-  res.render('contact', { title: 'Work with Us', banner: '/images/banner/CONTACT_BANNER.png' });
+  res.render('contact', {
+    title: 'Work with Us',
+    banner: [ '/images/banner/CONTACT_BANNER.png', '/images/banner/contact_banner_mobile.png' ]
+  });
 });
 
 module.exports = router;
