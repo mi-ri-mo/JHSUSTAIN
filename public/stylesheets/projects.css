@@ -58,6 +58,11 @@ body {
     box-shadow: 0 0 5px rgba(82, 83, 82, .4);
 }
 
+.content .image img {
+    width: 580px;
+    height: 360px;
+}
+
 .content .text {
     width: 580px;
     height: 360px;
@@ -163,7 +168,13 @@ body {
     width: 684px;
     height: 425px;
     box-shadow: 0 0 5px rgba(82, 83, 82, .4);
-    background-color: #7B7B7B;
+    overflow: hidden;
+    /*background-color: #7B7B7B;*/
+}
+
+.content_mobile .image_mobile img {
+    width: 684px;
+    height: auto;
 }
 
 .content_mobile .text_mobile {
