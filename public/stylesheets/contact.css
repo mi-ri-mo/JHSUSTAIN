@@ -55,12 +55,12 @@ body {
 }
 
 /* MOBILE PARTNERSHIP */
-.main_content_mobile .partnership {
+.main_content_mobile .partnership_mobile {
     width: 688px;
     height: 239px;
 }
 
-.main_content_mobile .partnership .content {
+.main_content_mobile .partnership_mobile .content_mobile {
     padding-top: 59.3px;
     display: flex;
     flex-direction: column;
@@ -68,13 +68,13 @@ body {
     align-items: flex-start;
 }
 
-.main_content_mobile .partnership .text {
+.main_content_mobile .partnership_mobile .text_mobile {
     font-size: 30px;
     font-weight: bold;
     line-height: 35.1px;
 }
 
-.main_content_mobile .partnership .image {
+.main_content_mobile .partnership_mobile .image_mobile {
     width: 688px;
     height: 100px;
 }
@@ -116,7 +116,7 @@ body {
 }
 
 /* MOBILE CONTACT */
-.main_content_mobile .contact {
+.main_content_mobile .contact_mobile {
     padding-top: 99.8px;
     width: 688px;
     height: 1592px;
@@ -125,25 +125,25 @@ body {
     justify-content: space-between;
 }
 
-.main_content_mobile .contact .text {
+.main_content_mobile .contact_mobile .text_mobile {
     width: 100%;
     height: 220px;
 }
 
-.main_content_mobile .contact_us {
+.main_content_mobile .contact_us_mobile {
     font-size: 30px;
     font-weight: bold;
     line-height: 35.1px;
 }
 
-.main_content_mobile .contact .text .slogan {
+.main_content_mobile .contact_mobile .text_mobile .slogan_mobile {
     font-size: 20px;
     font-weight: 600;
     line-height: 35.1px;
     margin-top: 30px;
 }
 
-.main_content_mobile .contact .text .info {
+.main_content_mobile .contact_mobile .text_mobile .info_mobile {
     width: 685.14px;
     font-size: 16px;
     font-weight: 500;
@@ -161,7 +161,7 @@ body {
     justify-content: space-between;
 }
 
-.main_content_mobile .map_form {
+.main_content_mobile .map_form_mobile {
     width: 100%;
     height: 1388.81px;
     padding-top: 16.5px;
@@ -230,14 +230,14 @@ body {
 }
 
 /* MOBILE FORM */
-.main_content_mobile .form {
+.main_content_mobile .form_mobile {
     width: 686px;
     height: 687.5px;
     display: flex;
     flex-direction: column;
 }
 
-.main_content_mobile .forms {
+.main_content_mobile .forms_mobile {
     width: 100%;
     height: 100px;
     margin-top: 26px;
@@ -246,26 +246,26 @@ body {
     justify-content: space-between;
 }
 
-.main_content_mobile .forms span {
+.main_content_mobile .forms_mobile span {
     font-size: 25px;
     font-weight: 600;
     line-height: 35.1px;
 }
 
-.main_content_mobile .forms input {
+.main_content_mobile .forms_mobile input {
     width: 100%;
     height: 54px;
     border: 0;
     box-shadow: 0 0 3px rgba(82, 83, 82, .4);
 }
 
-.main_content_mobile .button {
+.main_content_mobile .button_mobile {
     width: 180px;
     height: 70px;
     margin-top: 50px;
 }
 
-.main_content_mobile .button button {
+.main_content_mobile .button_mobile button {
     width: 100%;
     height: 100%;
     background-color: #184C4E;
