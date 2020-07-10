@@ -86,107 +86,103 @@
 </section>
 
 <!-- MAIN CONTENT -->
-<div style="width: 1180px; height: auto; margin-left: 370px; display: flex; flex-direction: column; align-items: center;">
-    <div style="font-size: 45px; font-weight: bold; line-height: 72px; width: 544px; height: 127px; text-align: center;">
-        Building Resilience for Sustainable ASEAN
-    </div>
-
-    <div style="width: 420px; margin-top: 15.5px; font-size: 16px; font-weight: bold; line-height: 19.17px; display: flex; flex-direction: row; justify-content: space-between;">
-        <div>
-            <img src="/images/clock.png" /> 20 January 2020
+<div class="main_contents">
+    <div class="main_content">
+        <div class="title">
+            <%= project.project_title %>
         </div>
-        <div>
-            <img src="/images/folder.png" /> Past & Ongoing Projects
+
+        <div class="date-category">
+            <div>
+                <img src="/images/clock.png" /> <%= project.project_period %>
+            </div>
+            <div>
+                <img src="/images/folder.png" /> Past & Ongoing Projects
+            </div>
         </div>
-    </div>
 
-    <div style="font-size: 17px; font-weight: 500; line-height: 27.2px; margin-top: 50px;">
-        In association with the ASEAN-ROK collaboration, JHSUSTAIN is coordinating between the Republic of Korea and ASEAN Member States in the joint project, “Building Resilience for Sustainable ASEAN”, aimed at finding policy and development solutions to mitigating the impacts of water-related disaster in the ASEAN region. The first phase of this project was completed in 2016 with the second currently in progress.
-        <br/><br/>
-        The first phase required ASEAN members to compose National Assessment Reports portraying their own nation’s situation in terms of water-related disasters, their experiences and their national policies aim at coping with and mitigating the impacts of disastrous events. JHSUSTAIN assisted the respective ASEAN Members in writing their own proposal by offering consultation services, cross-analyzing the various proposals and drafting the desired common outputs of the project. The outcome of this phase was the drafting of an ASEAN Regional Agenda for a safer ASEAN, where member states have identified their possible areas of cooperation in mitigation and adaptation to water-related disasters and outline the possible benefits of the ASEAN-ROK collaboration.
-    </div>
+        <div class="content">
+            <%= project.project_summary %>
+            <br/><br/>
+            <%= project.project_objectives %>
+        </div>
 
-    <div style="width: 1175px; height: 622px; margin-top: 20px;">
-        <img src="/images/project/project_sample.png" />
-    </div>
+        <div class="image">
+            <img src="<%= project.project_image %>" />
+        </div>
 
-    <div style="width: 100%; margin-top: 20px; margin-bottom: 93px; font-size: 17px; font-weight: 500; line-height: 27.2px; text-align: left;">
-        Final Workshop of the ROK-ASEAN Cooperation Project (Seoul, Korea / February, 2017)
+        <div class="location">
+            <%= project.project_locations %>
+        </div>
     </div>
 </div>
 
-<!--<table border="1">-->
-<!--    <tr>-->
-<!--        <td>작성자</td>-->
-<!--        <td><input type="text" name="name" id="name" value="" required/></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>제목</td>-->
-<!--        <td><input type="text" name="title" id="title" value="" required/></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>내용</td>-->
-<!--        <td><textarea name="content" id="content" cols="30" rows="10" required></textarea></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>패스워드</td>-->
-<!--        <td><input type="password" name="passwd" id="passwd" required/></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>변경일</td>-->
-<!--        <td></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>등록일</td>-->
-<!--        <td></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td>조회수</td>-->
-<!--        <td></td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--        <td colspan="2">-->
-<!--            <input type="submit" value="글 수정" formaction="/board/update">-->
-<!--            <input type="submit" value="글 삭제" formaction="/board/delete">-->
-<!--            <a href="/board/page">목록</a>-->
-<!--        </td>-->
-<!--    </tr>-->
-<!--</table>-->
-
-<!-- FOOTER -->
-<footer style="width: 100%; height: 300px; background-color: #184C4E">
-    <div style="width: 1180px; margin-left: 370px; display: flex; align-items: center">
-        <!-- TODO: 로고 -480px-> 글씨 -->
-        <!-- LOGO -->
-        <div style="display: flex; flex-direction: column; width: 202px;">
-            <img src="/images/logo/JHSUSTAIN_WHITE_LOGO.png" class="footer_logo_image">
-            <img src="/images/logo/JHSUSTAIN_WHITE_COMPANY_LOGO.png" class="footer_logo_letter">
+<!-- MOBILE MAIN CONTENT -->
+<div class="main_contents_mobile">
+    <div class="main_content_mobile">
+        <div class="title_mobile">
+            <%= project.project_title %>
         </div>
 
-        <!-- PAGES  -->
-        <!-- TODO: 위치 맞추기..... -->
-        <div style="display: flex; flex-direction: column; padding-left: 478px;">
-            <ul style="list-style: none;">
-                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
-                    <a href="#" style="color: white">Our Team</a>
-                </li>
-                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
-                    <a href="#" style="color: white">Our Work</a>
-                </li>
-                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
-                    <a href="#" style="color: white">In the News</a>
-                </li>
-                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">
-                    <a href="#" style="color: white">Work with Us</a>
-                </li>
-            </ul>
+        <div class="date-category_mobile">
+            <div>
+                <img src="/images/clock.png" /> <%= project.project_period %>
+            </div>
+            <div>
+                <img src="/images/folder.png" /> Past & Ongoing Projects
+            </div>
         </div>
 
-        <!-- CONNECT -->
-        <div>
+        <div class="content_mobile">
+            <%= project.project_summary %>
+            <br/><br/>
+            <%= project.project_objectives %>
+        </div>
+
+        <div class="image_mobile">
+            <img src="<%= project.project_image %>" />
+        </div>
+
+        <div class="location_mobile">
+            <%= project.project_locations %>
         </div>
     </div>
-</footer>
+</div>
+
+<!-- FOOTER -->
+<!--<footer style="width: 100%; height: 300px; background-color: #184C4E">-->
+<!--    <div style="width: 1180px; margin-left: 370px; display: flex; align-items: center">-->
+<!--        &lt;!&ndash; TODO: 로고 -480px-> 글씨 &ndash;&gt;-->
+<!--        &lt;!&ndash; LOGO &ndash;&gt;-->
+<!--        <div style="display: flex; flex-direction: column; width: 202px;">-->
+<!--            <img src="/images/logo/JHSUSTAIN_WHITE_LOGO.png" class="footer_logo_image">-->
+<!--            <img src="/images/logo/JHSUSTAIN_WHITE_COMPANY_LOGO.png" class="footer_logo_letter">-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; PAGES  &ndash;&gt;-->
+<!--        &lt;!&ndash; TODO: 위치 맞추기..... &ndash;&gt;-->
+<!--        <div style="display: flex; flex-direction: column; padding-left: 478px;">-->
+<!--            <ul style="list-style: none;">-->
+<!--                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">-->
+<!--                    <a href="#" style="color: white">Our Team</a>-->
+<!--                </li>-->
+<!--                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">-->
+<!--                    <a href="#" style="color: white">Our Work</a>-->
+<!--                </li>-->
+<!--                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">-->
+<!--                    <a href="#" style="color: white">In the News</a>-->
+<!--                </li>-->
+<!--                <li style="color: white; font-size: 20px; font-weight: bold; padding-bottom: .2rem;">-->
+<!--                    <a href="#" style="color: white">Work with Us</a>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; CONNECT &ndash;&gt;-->
+<!--        <div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</footer>-->
 
 </body>
 </html>

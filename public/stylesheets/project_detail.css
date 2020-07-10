@@ -4,3 +4,148 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffff;
 }
+
+.main_contents {
+    display: flex;
+    justify-content: center;
+}
+
+.main_content {
+    width: 1180px;
+    height: auto;
+    margin-top: 70.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 72px;
+    width: 544px;
+    height: 127px;
+    text-align: center;
+}
+
+.date-category {
+    width: 500px;
+    margin-top: 20px;
+    color: #545454;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19.17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27.2px;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+.image {
+    width: 1175px;
+    height: 622px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.location {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 93px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: justify;
+}
+
+/* MOBILE */
+.main_contents_mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.main_content_mobile {
+    width: 686px;
+    height: auto;
+    margin-top: 70.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_mobile {
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 72px;
+    width: 544px;
+    height: 127px;
+    text-align: center;
+}
+
+.date-category_mobile {
+    width: 500px;
+    margin-top: 20px;
+    color: #545454;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 19.17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content_mobile {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27.2px;
+    margin-top: 50px;
+    text-align: justify;
+}
+
+.image_mobile {
+    width: 686px;
+    height: 391px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.image_mobile img {
+    width: 100%;
+    height: auto;
+}
+
+.location_mobile {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 93px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27.2px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 798px) {
+    header {
+        height: 70px;
+    }
+    .main_contents, .main_content {
+        display: none;
+    }
+}
+@media screen and (min-width: 799px) {
+    .main_contents_mobile, .main_content_mobile {
+        display: none;
+    }
+}
