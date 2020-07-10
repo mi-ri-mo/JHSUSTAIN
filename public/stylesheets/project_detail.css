@@ -40,6 +40,10 @@ body {
     justify-content: space-between;
 }
 
+.date-category a {
+    color: #545454;
+}
+
 .content {
     font-size: 17px;
     font-weight: 500;
@@ -104,6 +108,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.date-category_mobile a {
+    color: #545454;
 }
 
 .content_mobile {
