@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- 로고 연결 -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/JHSUSTAIN_LOGO.png" />
@@ -167,17 +168,21 @@
     <div class="box_mobile">
         <!-- SORT -->
         <div class="sort_mobile">
-            <div class="button">
-                <div class="text">
-                    Sort by last
-                </div>
+<!--            <div class="button text" id="btnLast">Sort by Last</div>-->
+                <!-- Btn-->
+            <div class="container">
+                <button class="btn"><span>Sort</span><img src="/images/project/angle-down.png" />
+                    <ul class="dropdown">
+                        <li class="active"><a href="#">Sort by Last</a></li>
+                        <li><a href="#">Sort by Recent</a></li>
+                    </ul>
+                </button>
             </div>
         </div>
         <!-- CONTENT -->
         <div class="project_mobile">
             <%
                 for (let i = 1; i < length + 1; i++) {
-                    console.log(projectList[i]);
             %>
             <div class="content_mobile">
                 <!-- IMAGE -->

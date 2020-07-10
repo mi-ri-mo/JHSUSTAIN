@@ -41,10 +41,13 @@ CREATE TABLE admin (
 
 CREATE TABLE news (
 	news_id INT PRIMARY KEY AUTO_INCREMENT,
+	news_writer VARCHAR(20) NOT NULL,
 	news_title VARCHAR(100) NOT NULL,
-	news_content BLOB NOT NULL,
-	news_image BLOB NOT NULL,
-	news_date DATE NOT NULL,
+	news_content TEXT NOT NULL,
+	news_image TEXT NOT NULL,
+	news_date TEXT NOT NULL,
+	news_sources TEXT,
+	news_category VARCHAR(50) NOT NULL,
 	created_date DATE NOT NULL,
 	updated_date DATE NOT NULL
 );
@@ -52,13 +55,14 @@ CREATE TABLE news (
 CREATE TABLE projects (
 	project_id INT PRIMARY KEY AUTO_INCREMENT,
 	project_title VARCHAR(100) NOT NULL,
-	project_summary BLOB NOT NULL,
-	project_objectives BLOB NOT NULL,
+	project_summary TEXT NOT NULL,
+	project_objectives TEXT NOT NULL,
+	project_image TEXT,
 	project_period VARCHAR(50) NOT NULL,
 	project_locations VARCHAR(50) NOT NULL,
-	project_implementation BLOB NOT NULL,
-	project_partners BLOB NOT NULL,
-	project_link BLOB NOT NULL,
+	project_implementation TEXT,
+	project_partners TEXT NOT NULL,
+	project_link TEXT NOT NULL,
 	created_date DATE NOT NULL,
 	updated_date DATE NOT NULL
 );

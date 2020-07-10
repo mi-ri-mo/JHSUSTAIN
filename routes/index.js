@@ -53,7 +53,7 @@ router.get('/Past-Ongoing-Projects', function(req, res, next) {
     2: [],
     3: []
   };
-  let query = "SELECT * FROM projects ORDER BY project_id DESC";
+  let query = "SELECT project_id, project_title, project_summary, project_image FROM projects ORDER BY project_id DESC";
   connection.query(query, (err, result) => {
     if (err) {
       return res.send(err);
