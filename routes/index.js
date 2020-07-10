@@ -48,11 +48,7 @@ router.get('/Our-Services', function(req, res, next) {
 });
 
 router.get('/Past-Ongoing-Projects', function(req, res, next) {
-  let projectList = {
-    1: [],
-    2: [],
-    3: []
-  };
+  let projectList = {};
   let query = "SELECT project_id, project_title, project_summary, project_image FROM projects ORDER BY project_id DESC";
   connection.query(query, (err, result) => {
     if (err) {
@@ -74,9 +70,20 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/In-the-News', function(req, res, next) {
-  res.render('news', {
-    title: 'In the News',
-    banner: [ '/images/banner/NEWS_BANNER.png', '/images/banner/news_banner_mobile.png' ]
+  let newsList = {};
+  let query = "SELECT * FROM news ORDER BY news_id DESC";
+  connection.query(query, (err, result) => {
+    if (err) {
+      return res.send(err);
+    }
+    for (let i = 0; i < result.length; i++) {
+      newsList[result[i].news_id] = result[i];
+    }
+    res.render('news', {
+      title: 'In the News',
+      banner: [ '/images/banner/NEWS_BANNER.png', '/images/banner/news_banner_mobile.png' ],
+      newsList: newsList
+    });
   });
 });
 

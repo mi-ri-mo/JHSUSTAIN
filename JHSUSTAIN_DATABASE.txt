@@ -47,6 +47,7 @@ CREATE TABLE news (
 	news_image TEXT NOT NULL,
 	news_date TEXT NOT NULL,
 	news_sources TEXT,
+	news_sources_link TEXT,
 	news_category VARCHAR(50) NOT NULL,
 	created_date DATE NOT NULL,
 	updated_date DATE NOT NULL
@@ -211,4 +212,29 @@ INSERT INTO `projects`(`project_title`, `project_summary`, `project_objectives`,
 'Water Security for all: Asian Water Development Outlook 2020 Press Release from World Water Week \n https://www.worldwaterweek.org/event/8683-water-security-for-all-asian-water-development-outlook-2020',
 now(),
 now()
+)
+
+INSERT INTO news(news_writer, news_title, news_content, news_image, news_date, news_sources, news_sources_link, news_category, created_date, updated_date) VALUES (
+        'luisagirolami',
+        'Korea-ASEAN Summit & Korea-Mekong Summit',
+        'The “Korea-ASEAN Summit” and the 1st “Korea-Mekong Summit” were held on the 25th – 27th in Busan jointly organized by KICT, the Ministry of Environment and JHSUSTAIN. Water management organizations from 10 ASEAN countries, UNDRR (United Nations Disaster Risk Reduction), GCF (Green Climate Fund), Green Technology Centre and KOICA (Korea International Cooperation Agency) attended the workshop and formed the the Korea-ASEAN water security cooperation.\nMeanwhile, domestic small and medium-sized companies with new water management technologies such as WAVETALK and MJ have attracted attention by introducing and applying their own technologies and skills overseas. Participating companies continued discussions with the ASEAN delegation about introductions of related technologies and local applications.',
+        '/images/news/K-A S & K-M S.jpg',
+        '17 January 2020',
+        'Maeil: 건설연, 한-아세안 미래공동체 구상 위한 물안보 워크숍 성료/Smart Kyongjae: 건설연, ''한-아세안 미래공동체 구상을 위한 물안보 워크숍'' 성료/Today Korea: 건설연, 한-아세안 미래공동체... ''물안보 워크숍'' 성료/Gonsol Kyongjae: 건설연, 한-아세안 미래공동체 구성을 위한 물안보 워크숍 성료/KLD: 건설연, ''한-아세안 미래공동체 구상 물안보 워크숍'' 성료/FN News: 건설기술연구원, 한-아세안 물관리 기술협력방안 공개/Asia Today: 건설연, ''한-아세안 미래공동체 위한 물안보 워크숍'' 개최',
+        'http://www.m-i.kr/news/articleView.html?idxno=657647,http://www.dailysmart.co.kr/news/articleView.html?idxno=18576,http://www.todaykorea.co.kr/news/articleView.html?idxno=265989,http://www.cnews.co.kr/uhtml/read.jsp?idxno=201911250844214580723,http://www.ikld.kr/news/articleView.html?idxno=210897,https://www.fnnews.com/news/201911250928114647,https://www.asiatoday.co.kr/view.php?key=20191125010014173',
+        'Senza categoria',
+        now(),
+        now()
+)
+
+INSERT INTO news(news_writer, news_title, news_content, news_date, news_sources, news_sources_link, news_category, created_date, updated_date) VALUES (
+        'luisagirolami',
+        'JHSUSTAIN as a co-implementing agency for IoT 4 Mekong Delta Vietnam in P4G initiative',
+        'The Mekong Delta in southwestern Vietnam is home to more than 17 million people and an important agricultural and fishing region. A low-lying coastal region, the Mekong Delta is prone to flooding that experts predict will get worse due to climate change and rising sea levels.\nThis Partnership draws on the expertise of Vietnam’s Center for Region and Urban Studies, CLEAN (a Danish cleantech cluster), Green Tech Center Korea (a green tech thinktank) and JHSUSTAIN (a Korean water technology company). The partnership will install smart sensors and actuators in Long Xuyen City to pilot a networked system to improve disaster forecast accuracy and on-site response. This deployment will create a model to better predict and manage flood events in the Mekong Delta region of Vietnam to reduce human casualties from flooding while increasing disaster resilience and protecting agricultural production and community livelihoods.\nThe consortium will provide local municipal governments with a real-time digital application for simulating flooding events, which will include advanced flood maps and three-dimensional video for simulating flood scenarios.\nLonger term, the partnership hopes the improved data collection and modeling will unleash potential green growth development in this region. This could include developing hydro power from the lower Mekong River to provide sustainable electricity, improving rice cultivation and production, and growing the region’s freshwater aquaculture. ',
+        '17 January 2020',
+        'P4G partnership website: IoT 4 Mekong Delta Vietnam',
+        'https://p4gpartnerships.org/partnership/iot-4-mekong-delta-vietnam',
+        'Senza categoria',
+        now(),
+        now()
 )

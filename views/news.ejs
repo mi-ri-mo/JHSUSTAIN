@@ -114,130 +114,47 @@
 <!-- MAIN CONTENT -->
 <div class="main_contents">
     <div class="main_content">
-        <div class="news" style="margin-top: 30px;">
-            <div class="news_title">
-                Korea-ASEAN Summit & Korea-Mekong Summit
+        <%
+            const length = Object.keys(newsList).length;
+            for (let i = 1; i < length + 1; i++) {
+        %>
+            <div class="news">
+                <div class="news_title">
+                    <%= newsList[i].news_title %>
+                </div>
+                <div class="news_content">
+                    <%= newsList[i].news_content %>
+                </div>
+                <div class="news_date">
+                    <%= newsList[i].news_date %>
+                </div>
             </div>
-            <div class="news_content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news">
-            <div class="news_title">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news">
-            <div class="news_title">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news">
-            <div class="news_title">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news">
-            <div class="news_title">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date">
-                January 17, 2020
-            </div>
-        </div>
+        <%
+            }
+        %>
     </div>
 </div>
 
 <!-- MOBILE MAIN CONTENT -->
 <div class="main_contents_mobile">
     <div class="main_content_mobile">
-        <div class="news_mobile" style="margin-top: 30px;">
-            <div class="news_title_mobile">
-                Korea-ASEAN Summit & Korea-Mekong Summit
+        <%
+        for (let i = 1; i < length + 1; i++) {
+        %>
+            <div class="news_mobile">
+                <div class="news_title_mobile">
+                    <%= newsList[i].news_title %>
+                </div>
+                <div class="news_content_mobile">
+                    <%= newsList[i].news_content %>
+                </div>
+                <div class="news_date_mobile">
+                    <%= newsList[i].news_date %>
+                </div>
             </div>
-            <div class="news_content_mobile">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date_mobile">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news_mobile">
-            <div class="news_title_mobile">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content_mobile">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date_mobile">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news_mobile">
-            <div class="news_title_mobile">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content_mobile">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date_mobile">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news_mobile">
-            <div class="news_title_mobile">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content_mobile">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date_mobile">
-                January 17, 2020
-            </div>
-        </div>
-
-        <div class="news_mobile">
-            <div class="news_title_mobile">
-                Korea-ASEAN Summit & Korea-Mekong Summit
-            </div>
-            <div class="news_content_mobile">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-            </div>
-            <div class="news_date_mobile">
-                January 17, 2020
-            </div>
-        </div>
+        <%
+        }
+        %>
     </div>
 </div>
 
