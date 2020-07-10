@@ -14,7 +14,6 @@ body {
 .main_content {
     width: 1180px;
     height: 1630px;
-    margin-left: 370px;
     display: flex;
     flex-direction: column;
 }
