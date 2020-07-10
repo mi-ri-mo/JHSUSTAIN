@@ -65,13 +65,24 @@ router.get('/Past-Ongoing-Projects', function(req, res, next) {
   });
 });
 
+router.get('/projects/:idx', function(req, res, next) {
+  const idx = req.params.idx;
+
+  let query = "SELECT * FROM projects WHERE project_id = ?";
+  connection.query(query, [idx], (err, result) => {
+    if (err) {
+      return res.send(err);
+    }
+    res.render('project_detail', { title: result[0].project_title, project: result[0] });
+  });
+});
+
 router.get('/test', function(req, res, next) {
-  res.render('project_detail', { title: 'test' });
 });
 
 router.get('/In-the-News', function(req, res, next) {
   let newsList = {};
-  let query = "SELECT * FROM news ORDER BY news_id DESC";
+  let query = "SELECT news_id, news_title, news_content, news_date FROM news ORDER BY news_id DESC";
   connection.query(query, (err, result) => {
     if (err) {
       return res.send(err);
@@ -92,6 +103,10 @@ router.get('/Work-with-Us', function(req, res, next) {
     title: 'Work with Us',
     banner: [ '/images/banner/CONTACT_BANNER.png', '/images/banner/contact_banner_mobile.png' ]
   });
+});
+
+router.post('', function(req, res, next) {
+
 });
 
 module.exports = router;

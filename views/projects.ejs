@@ -132,14 +132,14 @@
             const length = Object.keys(projectList).length;
             for (let i = 1; i < length + 1; i++) {
             %>
-                <div class="content">
-                <!-- IMAGE -->
-                <div class="image">
-                    <img src="<%= projectList[i].project_image %>">
-                </div>
+                <div class="content" onclick="location.href='/projects/<%= projectList[i].project_id %>'" style="cursor: pointer;">
+                    <!-- IMAGE -->
+                    <div class="image">
+                        <img src="<%= projectList[i].project_image %>">
+                    </div>
 
-                <!-- TEXT -->
-                <div class="text">
+                    <!-- TEXT -->
+                    <div class="text">
                     <div class="box">
                         <div class="title">
                             <%= projectList[i].project_title %>
@@ -154,7 +154,7 @@
                         Read more <img src="images/button_arrow.png">
                     </button>
                 </div>
-            </div>
+                </div>
             <%
             }
             %>
@@ -184,7 +184,7 @@
             <%
                 for (let i = 1; i < length + 1; i++) {
             %>
-            <div class="content_mobile">
+            <div class="content_mobile" onclick="location.href='/projects/<%= projectList[i].project_id %>'" style="cursor: pointer;">
                 <!-- IMAGE -->
                 <div class="image_mobile">
                     <img src="<%= projectList[i].project_image %>">
