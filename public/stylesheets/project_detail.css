@@ -24,7 +24,7 @@ body {
     font-weight: bold;
     line-height: 72px;
     width: 544px;
-    height: 127px;
+    height: auto;
     text-align: center;
 }
 
@@ -94,12 +94,11 @@ body {
     font-weight: bold;
     line-height: 72px;
     width: 544px;
-    height: 127px;
+    height: auto;
     text-align: center;
 }
 
 .date-category_mobile {
-    width: 500px;
     margin-top: 20px;
     color: #545454;
     font-size: 16px;
@@ -107,7 +106,6 @@ body {
     line-height: 19.17px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .date-category_mobile a {
