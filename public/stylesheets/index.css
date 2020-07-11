@@ -413,6 +413,8 @@ header {
     width: 100%;
     height: 456px;
     margin-top: 31.7px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .projects .contents_box {
@@ -587,6 +589,12 @@ header {
     width: 100%;
     height: 351px;
     background-color: #ABABAB;
+    overflow: hidden;
+}
+
+.project_image_mobile img {
+    width: 100%;
+    height: auto;
 }
 
 .text_box_mobile {

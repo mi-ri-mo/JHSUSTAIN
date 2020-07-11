@@ -6,11 +6,33 @@ var connection = mysql_odbc.init();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    title: 'JHSUSTAIN',
-    banner: '/images/banner/MAIN_BANNER.png',
-    mission_images: [ '/images/main/MAIN1.png', '/images/main/MAIN2.png', '/images/main/MAIN3.png', '/images/main/MAIN4.png' ],
-    mobile_mission_images: [ '/images/main/mobile_main1.png', '/images/main/mobile_main2.png', '/images/main/mobile_main3.png', '/images/main/mobile_main4.png' ]
+  let projectList = {};
+  let newsList = {};
+
+  let query1 = "SELECT project_id, project_title, project_summary, project_image, project_period FROM projects;";
+  let query2 = "SELECT news_id, news_title, news_content, news_date FROM news;";
+
+  connection.query(query1 + query2, (err, result) => {
+    if (err) {
+      return res.send(err);
+    }
+    projectList = result[0];
+    newsList = result[1];
+    for (let i = 0; i < projectList[0].length; i++) {
+      projectList[projectList[i].project_id] = projectList[i];
+    }
+    for (let i = 0; i < newsList[0].length; i++) {
+      newsList[newsList[i].news_id] = newsList[i];
+    }
+
+    res.render('index', {
+      title: 'JHSUSTAIN',
+      banner: '/images/banner/MAIN_BANNER.png',
+      mission_images: [ '/images/main/MAIN1.png', '/images/main/MAIN2.png', '/images/main/MAIN3.png', '/images/main/MAIN4.png' ],
+      mobile_mission_images: [ '/images/main/mobile_main1.png', '/images/main/mobile_main2.png', '/images/main/mobile_main3.png', '/images/main/mobile_main4.png' ],
+      projectList: projectList,
+      newsList: newsList
+    });
   });
 });
 
@@ -75,9 +97,6 @@ router.get('/projects/:idx', function(req, res, next) {
     }
     res.render('project_detail', { title: result[0].project_title, project: result[0] });
   });
-});
-
-router.get('/test', function(req, res, next) {
 });
 
 router.get('/In-the-News', function(req, res, next) {

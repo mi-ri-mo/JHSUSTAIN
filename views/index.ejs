@@ -12,6 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+    <!-- bxSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
     <!-- 로고 연결 -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/JHSUSTAIN_LOGO.png" />
     <link rel="shortcut icon" type="image/png" href="/images/logo/JHSUSTAIN_LOGO.png" sizes="192x192"/>
@@ -44,6 +49,10 @@
                 });
             }); // end DOM ready
         })(jQuery); // end jQuery
+
+        $(document).ready(function() {
+            $('.slider').bxSlider();
+        });
     </script>
 </head>
 <body>
@@ -234,24 +243,30 @@
             </p>
 
             <div class="contents">
-                <div class="contents_box">
-                    <div class="arrows">
-                        <img src="images/MAIN_LEFT_ARROW.png" />
-                    </div>
+                <div class="contents_box slider">
+<!--                    <div class="arrows">-->
+<!--                        <img src="images/MAIN_LEFT_ARROW.png" />-->
+<!--                    </div>-->
+
+                    <%
+                    const length = Object.keys(projectList).length;
+                    for (let i = 0; i < length; i++) {
+                        console.log(projectList[i]);
+                    %>
 
                     <div class="content">
                         <div class="project_image">
-                            <!-- 여기에 이미지 넣기 -->
+                            <img src="<%= projectList[i].project_image %>">
                         </div>
 
                         <div class="text_box">
                             <div>
                                 <div class="title">
-                                    Climate Resilience Flood Management through Ecosystem-based Adaptation
+                                    <%= projectList[i].project_title %>
                                 </div>
 
                                 <div class="summary">
-                                    JHSUSTAIN is working in partnership with the Korea Institute of Civil Engineering and Construction Technology (KICT) to build the resilience of Leyte’s most exposed municipalities and promote a paradigm shift in....
+                                    <%= projectList[i].project_summary %>
                                 </div>
                             </div>
 
@@ -261,27 +276,31 @@
                                 </button>
 
                                 <div style="width: 162px; height: 70px; color: #7B7B7B; font-size: 16px; font-weight: 500; line-height: 19.2px; padding-right: 29px; padding-top: 23.2px;">
-                                    January 16, 2020
+                                    <%= projectList[i].project_period %>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="arrows">
-                        <img src="images/MAIN_RIGHT_ARROW.png" />
-                    </div>
+                    <%
+                        }
+                    %>
+
+<!--                    <div class="arrows">-->
+<!--                        <img src="images/MAIN_RIGHT_ARROW.png" />-->
+<!--                    </div>-->
                 </div>
 
-                <div class="progress_bar">
-                    <div class="bar" style="background-color: #184C4E;">
-                    </div>
-                    <div class="bar">
-                    </div>
-                    <div class="bar">
-                    </div>
-                    <div class="bar">
-                    </div>
-                </div>
+<!--                <div class="progress_bar">-->
+<!--                    <div class="bar" style="background-color: #184C4E;">-->
+<!--                    </div>-->
+<!--                    <div class="bar">-->
+<!--                    </div>-->
+<!--                    <div class="bar">-->
+<!--                    </div>-->
+<!--                    <div class="bar">-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
 
@@ -428,33 +447,40 @@
                         <img src="images/MAIN_LEFT_ARROW.png" />
                     </div>
 
+                    <%
+                        for (let i = 0; i < length; i++) {
+                            console.log(projectList[i]);
+                    %>
                     <div class="content_mobile">
                         <div class="project_image_mobile">
-                            <!-- 여기에 이미지 넣기 -->
+                            <img src="<%= projectList[i].project_image %>" />
                         </div>
 
                         <div class="text_box_mobile">
                             <div>
                                 <div class="title_mobile">
-                                    Climate Resilience Flood Management through Ecosystem-based Adaptation
+                                    <%= projectList[i].project_title %>
                                 </div>
 
                                 <div class="summary_mobile">
-                                    JHSUSTAIN is working in partnership with the Korea Institute of Civil Engineering and Construction Technology (KICT) to build the resilience of Leyte’s most exposed municipalities and promote a paradigm shift in....
+                                    <%= projectList[i].project_summary %>
                                 </div>
                             </div>
 
                             <div class="bottom_mobile">
-                                <button>
+                                <button onclick="location.href='/projects/<%= projectList[i].project_id %>'">
                                     Read more <img src="images/button_arrow.png">
                                 </button>
 
                                 <div class="project_date_mobile">
-                                    January 16, 2020
+                                    <%= projectList[i].project_date %>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <%
+                        }
+                    %>
 
                     <div class="arrows_mobile">
                         <img src="images/MAIN_RIGHT_ARROW.png" />
