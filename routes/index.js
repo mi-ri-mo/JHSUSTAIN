@@ -117,6 +117,19 @@ router.get('/In-the-News', function(req, res, next) {
   });
 });
 
+router.get('/In-the-News/:idx', function(req, res, next) {
+  const idx = req.params.idx;
+
+  let query = "SELECT * FROM news WHERE news_id = ?";
+  connection.query(query, [idx], (err, result) => {
+    if (err) {
+      return res.send(err);
+    }
+
+    res.render('news_detail', { title: result[0].news_title, news: result[0] });
+  });
+});
+
 router.get('/Work-with-Us', function(req, res, next) {
   res.render('contact', {
     title: 'Work with Us',

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=750px">
+
+    <title><%= title %></title>
+
+    <!-- 반응형 bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- 로고 연결 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/JHSUSTAIN_LOGO.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo/JHSUSTAIN_LOGO.png" sizes="192x192"/>
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="/stylesheets/news_detail.css" />
+    <link rel="stylesheet" href="/stylesheets/navigation.css" />
+    <link rel="stylesheet" href="/stylesheets/banner.css" />
+    <link rel="stylesheet" href="/stylesheets/footer.css" />
+    <script>
+        (function($) { // Begin jQuery
+            $(function() { // DOM ready
+                // If a link has a dropdown, add sub menu toggle.
+                $('nav ul li a:not(:only-child)').click(function(e) {
+                    $(this).siblings('.nav-dropdown').toggle();
+                    // Close one dropdown when selecting another
+                    $('.nav-dropdown').not($(this).siblings()).hide();
+                    e.stopPropagation();
+                });
+                // Clicking away from dropdown will remove the dropdown class
+                $('html').click(function() {
+                    $('.nav-dropdown').hide();
+                });
+                // Toggle open and close nav styles on click
+                $('#nav-toggle').click(function() {
+                    $('nav ul').slideToggle();
+                });
+                // Hamburger to X toggle
+                $('#nav-toggle').on('click', function() {
+                    this.classList.toggle('active');
+                });
+            }); // end DOM ready
+        })(jQuery); // end jQuery
+    </script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<section class="navigation">
+    <div class="nav-container">
+        <div class="brand">
+            <a href="/">
+                <img src="/images/logo/JHSUSTAIN_FULL_LOGO.png" class="nav_logo" />
+            </a>
+        </div>
+        <nav>
+            <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+                <li>
+                    <a href="/Our-Team">Our Team</a>
+                </li>
+                <li>
+                    <a href="#!">Our Work</a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="/Our-Services">Our Services</a>
+                        </li>
+                        <li>
+                            <a href="/Past-Ongoing-Projects">Past & Ongoing Projects</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/In-the-News">In the News</a>
+                </li>
+                <li>
+                    <a href="/Work-with-Us">Work with Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="main_contents">
+    <div class="main_content">
+        <div class="title">
+            <%= news.news_title %>
+        </div>
+
+        <div class="date-category">
+            <div>
+                Writer: <%= news.news_writer %>
+            </div>
+            <div style="margin-left: 20px;">
+                <img src="/images/clock.png" /> <%= news.news_date %>
+            </div>
+            <div style="margin-left: 20px;">
+                <a href="/In-the-News"><img src="/images/folder.png" /> In the News</a>
+            </div>
+            <div style="margin-left: 20px;">
+                <img src="/images/folder.png" /> <%= news.news_category %>
+            </div>
+        </div>
+
+        <div class="content">
+            <%
+            if (news.news_image != null) {
+                const images = news.news_image.split(', ');
+            for (var i = 0; i < images.length; i++) {
+            %>
+                <div class="" style="width: 1180px; height: auto;">
+                    <img style ="width: 1180px; height: auto;" src="<%= images[i] %>" />
+                    <br/><br/>
+                </div>
+            <%
+            }
+            }
+            %>
+
+            <%- news.news_content %>
+
+            <br/><br/>
+            <%
+            if (news.news_sources != null) {
+                const source = news.news_sources.split(', ');
+                const source_link = news.news_sources_link.split(', ');
+            for (var i = 0; i < source.length; i++) {
+            %>
+                <a href="<%= source_link[i] %>"><%= source[i] %></a>
+                <br/>
+            <%
+            }
+            }
+            %>
+        </div>
+    </div>
+</div>
+
+<!-- MOBILE MAIN CONTENT -->
+<div class="main_contents_mobile">
+    <div class="main_content_mobile">
+        <div class="title_mobile">
+            <%= news.news_title %>
+        </div>
+
+        <div class="date-category_mobile">
+            <div>
+                Writer: <%= news.news_writer %>
+            </div>
+            <div style="margin-left: 20px;">
+                <img src="/images/clock.png" /> <%= news.news_date %>
+            </div>
+            <div style="margin-left: 20px;">
+                <a href="/In-the-News"><img src="/images/folder.png" /> In the News</a>
+            </div>
+            <div style="margin-left: 20px;">
+                <img src="/images/folder.png" /> <%= news.news_category %>
+            </div>
+        </div>
+
+        <div class="content_mobile">
+            <%
+            if (news.news_image != null) {
+                const images = news.news_image.split(', ');
+            for (var i = 0; i < images.length; i++) {
+            %>
+                <div class="" style="width: 686px; height: auto;">
+                    <img style ="width: 686px; height: auto;" src="<%= images[i] %>" />
+                    <br/><br/>
+                </div>
+            <%
+            }
+            }
+            %>
+
+            <%- news.news_content %>
+
+            <br/><br/>
+            <%
+            if (news.news_sources != null) {
+                const source = news.news_sources.split(', ');
+                const source_link = news.news_sources_link.split(', ');
+            for (var i = 0; i < source.length; i++) {
+            %>
+                <a href="<%= source_link[i] %>"><%= source[i] %></a>
+                <br/>
+            <%
+            }
+            }
+            %>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
