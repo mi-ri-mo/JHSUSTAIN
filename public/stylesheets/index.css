@@ -17,6 +17,15 @@ header {
     width: 1180px;
     height: 58px;
     margin-left: 370px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_alert {
+    display: inline-block;
+    margin-top: 18px;
+    color: #FF0000;
+    font-weight: 600;
 }
 
 .login {
